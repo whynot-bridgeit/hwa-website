@@ -1,0 +1,3723 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홀리스틱웰니스얼라이언스협회 | Holistic Wellness Alliance</title>
+  <meta name="description" content="통합 홀리스틱 웰니스를 위한 비영리 협회. 몸·마음·영혼의 균형을 통해 진정한 웰빙을 실현합니다." />
+  <meta name="keywords" content="홀리스틱웰니스, holistic wellness, 통합의학, 웰니스협회, wellness alliance, 자연치유, 마음챙김" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== DESIGN SYSTEM ===== */
+    :root {
+      --sand: #C8B89A;
+      --sand-light: #E8DDD0;
+      --sand-pale: #F5F0EA;
+      --moss: #6B7C5C;
+      --moss-light: #8A9B7A;
+      --moss-dark: #4A5A3C;
+      --gold: #B8962E;
+      --gold-light: #D4B050;
+      --gold-pale: #F0E4B8;
+      --earth: #8B6B4A;
+      --earth-light: #A88060;
+      --earth-pale: #F2EBE0;
+      --charcoal: #2C2C2C;
+      --charcoal-mid: #4A4A4A;
+      --charcoal-light: #6A6A6A;
+      --white: #FFFFFF;
+      --off-white: #FAFAF7;
+      --border: rgba(200, 184, 154, 0.3);
+      --shadow: 0 4px 24px rgba(44, 44, 44, 0.08);
+      --shadow-lg: 0 8px 48px rgba(44, 44, 44, 0.12);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--off-white);
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .serif { font-family: 'Noto Serif KR', 'Cormorant Garamond', serif; }
+    h1, h2, h3 { font-family: 'Noto Serif KR', serif; font-weight: 500; line-height: 1.3; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section-sm { padding: 48px 0; }
+
+    /* ===== HEADER ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(250, 250, 247, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      padding: 0 32px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .logo-emblem {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--moss), var(--gold));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--moss-dark);
+      letter-spacing: 2px;
+      line-height: 1.2;
+    }
+    .logo-sub {
+      font-size: 10px;
+      color: var(--charcoal-light);
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    nav { display: flex; align-items: center; gap: 4px; }
+
+    .nav-link {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal-mid);
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      background: none;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      background: var(--sand-pale);
+      color: var(--moss-dark);
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 16px;
+      padding-left: 16px;
+      border-left: 1px solid var(--border);
+    }
+
+    .lang-btn {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--charcoal-light);
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      background: none;
+    }
+
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--moss);
+      color: white;
+      border-color: var(--moss);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: none;
+      background: none;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--charcoal);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    /* ===== PAGES ===== */
+    .page { display: none; padding-top: 72px; min-height: 100vh; }
+    .page.active { display: block; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 40%, #1a2a2a 100%);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(107, 124, 92, 0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(184, 150, 46, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(139, 107, 74, 0.2) 0%, transparent 50%);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 40px,
+          rgba(200, 184, 154, 0.03) 40px,
+          rgba(200, 184, 154, 0.03) 41px
+        );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 80px 32px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(107, 124, 92, 0.3);
+      border: 1px solid rgba(107, 124, 92, 0.5);
+      border-radius: 100px;
+      font-size: 12px;
+      color: var(--sand-light);
+      letter-spacing: 2px;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+
+    .hero h1 {
+      color: var(--white);
+      margin-bottom: 24px;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin-bottom: 48px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--moss), var(--moss-dark));
+      color: white;
+      box-shadow: 0 4px 20px rgba(107, 124, 92, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(107, 124, 92, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: white;
+      box-shadow: 0 4px 20px rgba(184, 150, 46, 0.4);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(184, 150, 46, 0.5);
+    }
+
+    .btn-moss-outline {
+      background: transparent;
+      color: var(--moss-dark);
+      border: 1.5px solid var(--moss);
+    }
+
+    .btn-moss-outline:hover {
+      background: var(--moss);
+      color: white;
+    }
+
+    /* ===== STATS ===== */
+    .stats-bar {
+      background: rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 1px; }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: var(--sand-pale);
+      border: 1px solid var(--sand);
+      border-radius: 100px;
+      font-size: 11px;
+      color: var(--earth);
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .section-header h2 { color: var(--charcoal); margin-bottom: 16px; }
+    .section-header p { color: var(--charcoal-light); max-width: 560px; margin: 0 auto; font-size: 16px; }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--sand);
+    }
+
+    /* ===== GRID ===== */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+    /* ===== HOME PAGE ===== */
+    /* Mission Section */
+    .mission-section { background: var(--sand-pale); }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .mission-text h2 { margin-bottom: 24px; color: var(--moss-dark); }
+    .mission-text p { color: var(--charcoal-mid); margin-bottom: 20px; font-size: 16px; line-height: 1.8; }
+
+    .mission-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .value-item {
+      padding: 20px;
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .value-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--moss-light), var(--moss));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .value-item h4 { font-size: 14px; font-weight: 600; color: var(--moss-dark); margin-bottom: 6px; }
+    .value-item p { font-size: 13px; color: var(--charcoal-light); line-height: 1.6; }
+
+    .mission-visual {
+      background: linear-gradient(135deg, var(--moss-dark), var(--moss));
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      color: white;
+      text-align: center;
+    }
+
+    .mission-visual .big-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 300;
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .mission-visual h3 { font-size: 1.5rem; margin-bottom: 16px; font-weight: 400; }
+    .mission-visual p { opacity: 0.8; font-size: 15px; line-height: 1.8; }
+
+    /* Why Holistic */
+    .why-section { background: white; }
+
+    .comparison-table {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .comparison-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background: var(--charcoal);
+      color: white;
+    }
+
+    .comparison-header div {
+      padding: 20px 24px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .comparison-header div:first-child { text-align: left; }
+
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-row:last-child { border-bottom: none; }
+
+    .comparison-row div {
+      padding: 16px 24px;
+      font-size: 14px;
+      color: var(--charcoal-mid);
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .comparison-row div:first-child { text-align: left; font-weight: 500; color: var(--charcoal); border-right: 1px solid var(--border); }
+    .comparison-row div:last-child { border-right: none; color: var(--moss-dark); font-weight: 500; }
+
+    .check { color: var(--moss); font-size: 16px; }
+    .cross { color: #ccc; font-size: 16px; }
+
+    /* Phases */
+    .phases-section { background: var(--earth-pale); }
+
+    .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .phase-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phase-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--moss), var(--gold));
+    }
+
+    .phase-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .phase-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--sand);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .phase-card h3 { color: var(--moss-dark); margin-bottom: 12px; font-size: 1.1rem; }
+    .phase-card p { color: var(--charcoal-light); font-size: 14px; line-height: 1.7; }
+
+    .phase-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .phase-tag {
+      padding: 4px 10px;
+      background: var(--sand-pale);
+      border-radius: 100px;
+      font-size: 11px;
+      color: var(--earth);
+      border: 1px solid var(--sand);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--moss-dark) 0%, var(--charcoal) 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-section p { color: rgba(255,255,255,0.75); margin-bottom: 40px; font-size: 17px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    /* ===== ABOUT PAGE ===== */
+    .about-hero {
+      background: linear-gradient(135deg, var(--moss-dark), var(--charcoal));
+      color: white;
+      padding: 120px 32px 80px;
+      text-align: center;
+    }
+
+    .about-hero h1 { color: white; margin-bottom: 20px; }
+    .about-hero p { color: rgba(255,255,255,0.75); font-size: 18px; max-width: 600px; margin: 0 auto; }
+
+    .journey-section { background: white; }
+
+    .journey-timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .journey-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--moss), var(--gold), var(--earth));
+      transform: translateX(-50%);
+    }
+
+    .journey-item {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 0;
+      margin-bottom: 48px;
+      align-items: start;
+    }
+
+    .journey-item:nth-child(even) .journey-content-left { order: 3; }
+    .journey-item:nth-child(even) .journey-center { order: 2; }
+    .journey-item:nth-child(even) .journey-content-right { order: 1; }
+
+    .journey-content-left, .journey-content-right {
+      padding: 0 32px;
+    }
+
+    .journey-content-left { text-align: right; }
+    .journey-content-right { text-align: left; }
+
+    .journey-item:nth-child(even) .journey-content-left { text-align: left; }
+    .journey-item:nth-child(even) .journey-content-right { text-align: right; }
+
+    .journey-center {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 8px;
+    }
+
+    .journey-dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--moss), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 0 0 6px var(--sand-pale);
+      position: relative;
+      z-index: 1;
+    }
+
+    .journey-card {
+      background: var(--off-white);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+
+    .journey-phase-label {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .journey-card h3 { color: var(--moss-dark); margin-bottom: 10px; font-size: 1.05rem; }
+    .journey-card p { color: var(--charcoal-light); font-size: 13px; line-height: 1.7; }
+
+    /* ===== MEMBERSHIP PAGE ===== */
+    .membership-hero {
+      background: linear-gradient(135deg, var(--earth), var(--charcoal));
+      color: white;
+      padding: 120px 32px 80px;
+      text-align: center;
+    }
+
+    .membership-hero h1 { color: white; margin-bottom: 20px; }
+    .membership-hero p { color: rgba(255,255,255,0.75); font-size: 18px; max-width: 600px; margin: 0 auto; }
+
+    .membership-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .membership-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      border: 2px solid var(--border);
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .membership-card.featured {
+      border-color: var(--gold);
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .membership-card.featured::before {
+      content: attr(data-badge);
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: white;
+      padding: 6px 20px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .membership-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .membership-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+
+    .membership-tier {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--charcoal-light);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .membership-card h3 { color: var(--charcoal); margin-bottom: 8px; font-size: 1.5rem; }
+
+    .membership-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--moss-dark);
+      margin: 20px 0;
+      line-height: 1;
+    }
+
+    .membership-price span { font-size: 1rem; font-weight: 400; color: var(--charcoal-light); }
+
+    .membership-features {
+      list-style: none;
+      margin: 24px 0;
+      text-align: left;
+    }
+
+    .membership-features li {
+      padding: 8px 0;
+      font-size: 14px;
+      color: var(--charcoal-mid);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .membership-features li::before {
+      content: '✓';
+      color: var(--moss);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .membership-features li.disabled { color: var(--charcoal-light); }
+    .membership-features li.disabled::before { content: '–'; color: #ccc; }
+
+    /* Application Form */
+    .form-section { background: var(--sand-pale); }
+
+    .form-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      border: 1px solid var(--border);
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group { margin-bottom: 24px; }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: var(--charcoal);
+      background: var(--off-white);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--moss);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(107, 124, 92, 0.1);
+    }
+
+    .form-textarea { resize: vertical; min-height: 120px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* ===== CONTACT PAGE ===== */
+    .contact-hero {
+      background: linear-gradient(135deg, var(--charcoal), var(--moss-dark));
+      color: white;
+      padding: 120px 32px 80px;
+      text-align: center;
+    }
+
+    .contact-hero h1 { color: white; margin-bottom: 20px; }
+    .contact-hero p { color: rgba(255,255,255,0.75); font-size: 18px; max-width: 600px; margin: 0 auto; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
+
+    .contact-info-card {
+      background: var(--moss-dark);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      color: white;
+    }
+
+    .contact-info-card h3 { color: white; margin-bottom: 32px; font-size: 1.3rem; }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 1px; margin-bottom: 4px; }
+    .contact-item p { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.6; }
+
+    /* FAQ */
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      color: var(--charcoal);
+      background: white;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover { background: var(--sand-pale); }
+    .faq-question.open { background: var(--sand-pale); color: var(--moss-dark); }
+
+    .faq-arrow { transition: var(--transition); font-size: 12px; color: var(--charcoal-light); }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      color: var(--charcoal-light);
+      font-size: 14px;
+      line-height: 1.8;
+      background: var(--sand-pale);
+    }
+
+    .faq-answer.open { display: block; }
+
+    /* ===== PARTNERS PAGE ===== */
+    .partners-hero {
+      background: linear-gradient(135deg, #1a2a3a 0%, #2a3a2a 60%, #1a2a1a 100%);
+      color: white;
+      padding: 120px 32px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .partners-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(107, 124, 92, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(184, 150, 46, 0.15) 0%, transparent 50%);
+    }
+
+    .partners-hero > * { position: relative; z-index: 1; }
+    .partners-hero h1 { color: white; margin-bottom: 20px; }
+    .partners-hero p { color: rgba(255,255,255,0.75); font-size: 18px; max-width: 640px; margin: 0 auto 40px; }
+
+    .partners-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .partners-stat { text-align: center; }
+    .partners-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .partners-stat-label { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 1px; margin-top: 4px; }
+
+    /* Partners Tabs */
+    .partners-tabs-section { background: white; position: sticky; top: 72px; z-index: 100; border-bottom: 2px solid var(--border); }
+
+    .partners-main-tabs {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .partners-main-tabs::-webkit-scrollbar { display: none; }
+
+    .main-tab-btn {
+      padding: 18px 28px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--charcoal-light);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      letter-spacing: 0.5px;
+    }
+
+    .main-tab-btn:hover { color: var(--moss-dark); background: var(--sand-pale); }
+    .main-tab-btn.active { color: var(--moss-dark); border-bottom-color: var(--moss); font-weight: 600; }
+
+    .main-tab-content { display: none; }
+    .main-tab-content.active { display: block; }
+
+    /* Phase Sub-tabs */
+    .phase-subtabs-wrap {
+      background: var(--sand-pale);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+    }
+
+    .phase-subtabs {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 12px 0;
+    }
+
+    .phase-subtabs::-webkit-scrollbar { display: none; }
+
+    .phase-sub-btn {
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: white;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--charcoal-mid);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .phase-sub-btn:hover { border-color: var(--moss); color: var(--moss-dark); }
+    .phase-sub-btn.active { background: var(--moss); border-color: var(--moss); color: white; }
+
+    .phase-content { display: none; padding: 48px 0; }
+    .phase-content.active { display: block; }
+
+    /* Phase Header */
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      padding: 32px;
+      background: linear-gradient(135deg, var(--moss-dark), var(--moss));
+      border-radius: var(--radius-lg);
+      color: white;
+    }
+
+    .phase-header-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 300;
+      opacity: 0.4;
+      line-height: 1;
+    }
+
+    .phase-header-info h3 { color: white; font-size: 1.4rem; margin-bottom: 8px; }
+    .phase-header-info p { color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.7; }
+
+    /* Partner Cards */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .partner-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--moss);
+    }
+
+    .partner-card-header {
+      background: linear-gradient(135deg, var(--sand-pale), var(--earth-pale));
+      padding: 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .partner-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--moss), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 16px;
+      box-shadow: 0 4px 16px rgba(107, 124, 92, 0.3);
+    }
+
+    .partner-phase-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 10px;
+      background: var(--moss);
+      color: white;
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .partner-card-header h3 { color: var(--charcoal); font-size: 1.1rem; margin-bottom: 4px; }
+    .partner-card-header .partner-category { font-size: 12px; color: var(--charcoal-light); letter-spacing: 1px; }
+
+    .partner-card-body { padding: 24px; }
+    .partner-card-body p { font-size: 13px; color: var(--charcoal-mid); line-height: 1.7; margin-bottom: 16px; }
+
+    .partner-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .partner-tag {
+      padding: 4px 10px;
+      background: var(--sand-pale);
+      border-radius: 100px;
+      font-size: 11px;
+      color: var(--earth);
+      border: 1px solid var(--sand);
+    }
+
+    .partner-cta {
+      display: flex;
+      gap: 8px;
+    }
+
+    .partner-cta .btn-visit {
+      flex: 1;
+      padding: 10px 16px;
+      background: linear-gradient(135deg, var(--moss), var(--moss-dark));
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .partner-cta .btn-visit:hover {
+      background: linear-gradient(135deg, var(--moss-dark), var(--charcoal));
+      transform: translateY(-1px);
+    }
+
+    .partner-cta .btn-detail {
+      padding: 10px 16px;
+      background: var(--sand-pale);
+      color: var(--charcoal-mid);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .partner-cta .btn-detail:hover {
+      background: var(--sand);
+      color: var(--charcoal);
+    }
+
+    /* Partner Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-lg);
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, var(--moss-dark), var(--moss));
+      padding: 40px;
+      color: white;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover { background: rgba(255,255,255,0.3); }
+
+    .modal-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .modal-header h2 { color: white; font-size: 1.6rem; margin-bottom: 8px; }
+    .modal-header p { color: rgba(255,255,255,0.8); font-size: 14px; }
+
+    .modal-body { padding: 40px; }
+
+    .modal-section { margin-bottom: 32px; }
+    .modal-section h4 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .modal-section p { color: var(--charcoal-mid); font-size: 15px; line-height: 1.8; }
+
+    .modal-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .modal-highlight {
+      text-align: center;
+      padding: 20px;
+      background: var(--sand-pale);
+      border-radius: var(--radius);
+    }
+
+    .modal-highlight .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--moss-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .modal-highlight .label { font-size: 12px; color: var(--charcoal-light); }
+
+    .modal-footer {
+      padding: 24px 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    /* ===== COMMUNITY TAB ===== */
+    .community-section { padding: 48px 0; background: var(--off-white); }
+
+    .community-upload-area {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 2px dashed var(--border);
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 40px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .community-upload-area:hover {
+      border-color: var(--moss);
+      background: var(--sand-pale);
+    }
+
+    .upload-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.5; }
+    .community-upload-area h3 { color: var(--charcoal); margin-bottom: 8px; font-size: 1.1rem; }
+    .community-upload-area p { color: var(--charcoal-light); font-size: 14px; margin-bottom: 24px; }
+
+    .upload-types {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .upload-type-badge {
+      padding: 6px 14px;
+      background: var(--sand-pale);
+      border-radius: 100px;
+      font-size: 12px;
+      color: var(--earth);
+      border: 1px solid var(--sand);
+    }
+
+    #fileUploadInput { display: none; }
+
+    /* Feed */
+    .feed-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .feed-header h3 { color: var(--charcoal); font-size: 1.2rem; }
+
+    .feed-filters {
+      display: flex;
+      gap: 8px;
+    }
+
+    .feed-filter {
+      padding: 6px 16px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: white;
+      font-size: 12px;
+      color: var(--charcoal-mid);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .feed-filter.active, .feed-filter:hover {
+      background: var(--moss);
+      border-color: var(--moss);
+      color: white;
+    }
+
+    .feed-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .feed-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .feed-card:hover { box-shadow: var(--shadow-lg); }
+
+    .feed-media {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: linear-gradient(135deg, var(--sand-pale), var(--earth-pale));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: var(--sand);
+    }
+
+    .feed-media img, .feed-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feed-body { padding: 20px; }
+
+    .feed-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .feed-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--moss), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .feed-author { font-size: 13px; font-weight: 600; color: var(--charcoal); }
+    .feed-date { font-size: 12px; color: var(--charcoal-light); margin-left: auto; }
+
+    .feed-body p { font-size: 14px; color: var(--charcoal-mid); line-height: 1.7; margin-bottom: 16px; }
+
+    .feed-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .feed-tag {
+      padding: 3px 10px;
+      background: var(--sand-pale);
+      border-radius: 100px;
+      font-size: 11px;
+      color: var(--earth);
+    }
+
+    .feed-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .feed-action-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      background: white;
+      font-size: 13px;
+      color: var(--charcoal-mid);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .feed-action-btn:hover { background: var(--sand-pale); border-color: var(--sand); }
+
+    .feed-action-btn.liked {
+      background: #fff0f0;
+      border-color: #ffb3b3;
+      color: #e05555;
+    }
+
+    .feed-action-btn .icon { font-size: 15px; }
+
+    .share-dropdown {
+      position: relative;
+      margin-left: auto;
+    }
+
+    .share-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 44px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      min-width: 180px;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .share-menu.open { display: block; }
+
+    .share-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--charcoal-mid);
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .share-menu-item:hover { background: var(--sand-pale); color: var(--charcoal); }
+
+    /* Comments */
+    .comments-section {
+      display: none;
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--off-white);
+    }
+
+    .comments-section.open { display: block; }
+
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .comment-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--earth), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .comment-bubble {
+      background: white;
+      border-radius: 0 12px 12px 12px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      flex: 1;
+    }
+
+    .comment-bubble .comment-author { font-size: 12px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+    .comment-bubble p { font-size: 13px; color: var(--charcoal-mid); line-height: 1.6; }
+
+    .comment-input-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .comment-input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      font-size: 13px;
+      font-family: 'Noto Sans KR', sans-serif;
+      outline: none;
+      transition: var(--transition);
+      background: white;
+    }
+
+    .comment-input:focus { border-color: var(--moss); }
+
+    .comment-submit {
+      padding: 10px 20px;
+      background: var(--moss);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .comment-submit:hover { background: var(--moss-dark); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.7);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo-main { color: var(--sand-light); font-size: 18px; }
+    .footer-brand .logo-sub { color: rgba(255,255,255,0.4); }
+    .footer-brand p { margin-top: 16px; font-size: 14px; line-height: 1.8; }
+
+    .footer-col h4 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--sand);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a, .footer-col ul li span {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .footer-col ul li a:hover, .footer-col ul li span:hover { color: var(--sand-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p { font-size: 13px; }
+
+    .footer-contact {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--charcoal);
+      color: white;
+      padding: 14px 24px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      box-shadow: var(--shadow-lg);
+      z-index: 3000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .phases-grid { grid-template-columns: repeat(2, 1fr); }
+      .partners-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .phases-grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: 1fr; }
+      .membership-cards { grid-template-columns: 1fr; }
+      .membership-card.featured { transform: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .mission-grid { grid-template-columns: 1fr; }
+      .journey-timeline::before { left: 24px; }
+      .journey-item { grid-template-columns: 48px 1fr; }
+      .journey-content-left { display: none; }
+      .journey-center { justify-content: flex-start; }
+      .journey-content-right { padding-left: 16px; }
+      .feed-grid { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .modal-highlights { grid-template-columns: 1fr; }
+      .header-inner { padding: 0 16px; }
+      .hero-content { padding: 60px 16px; }
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px;
+      z-index: 999;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .mobile-nav.open { display: block; }
+
+    .mobile-nav .nav-link {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 15px;
+    }
+
+    .mobile-lang-row {
+      display: flex;
+      gap: 8px;
+      padding: 12px 16px;
+      flex-wrap: wrap;
+    }
+
+    /* RTL Support */
+    [dir="rtl"] .header-inner { flex-direction: row-reverse; }
+    [dir="rtl"] .hero-content { text-align: right; }
+    [dir="rtl"] .journey-content-left { text-align: left; }
+    [dir="rtl"] .journey-content-right { text-align: right; }
+
+    /* Utility */
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-24 { margin-top: 24px; }
+    .mt-32 { margin-top: 32px; }
+    .mb-8 { margin-bottom: 8px; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; }
+    .mb-32 { margin-bottom: 32px; }
+    .hidden { display: none !important; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-emblem">HWA</div>
+      <div class="logo-text">
+        <span class="logo-main" data-i18n="logo_main">HOLISTIC WELLNESS ALLIANCE</span>
+        <span class="logo-sub" data-i18n="logo_sub">홀리스틱웰니스얼라이언스협회</span>
+      </div>
+    </div>
+
+    <nav id="mainNav">
+      <button class="nav-link active" onclick="showPage('home')" data-i18n="nav_home">HOME</button>
+      <button class="nav-link" onclick="showPage('about')" data-i18n="nav_about">ABOUT</button>
+      <button class="nav-link" onclick="showPage('partners')" data-i18n="nav_partners">PARTNERS</button>
+      <button class="nav-link" onclick="showPage('membership')" data-i18n="nav_membership">MEMBERSHIP</button>
+      <button class="nav-link" onclick="showPage('contact')" data-i18n="nav_contact">CONTACT</button>
+    </nav>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('ko')">KO</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('zh')">ZH</button>
+      <button class="lang-btn" onclick="setLang('ja')">JA</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="nav-link" onclick="showPage('home'); toggleMobileMenu()" data-i18n="nav_home">HOME</button>
+  <button class="nav-link" onclick="showPage('about'); toggleMobileMenu()" data-i18n="nav_about">ABOUT</button>
+  <button class="nav-link" onclick="showPage('partners'); toggleMobileMenu()" data-i18n="nav_partners">PARTNERS</button>
+  <button class="nav-link" onclick="showPage('membership'); toggleMobileMenu()" data-i18n="nav_membership">MEMBERSHIP</button>
+  <button class="nav-link" onclick="showPage('contact'); toggleMobileMenu()" data-i18n="nav_contact">CONTACT</button>
+  <div class="mobile-lang-row">
+    <button class="lang-btn active" onclick="setLang('ko')">KO</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('zh')">ZH</button>
+    <button class="lang-btn" onclick="setLang('ja')">JA</button>
+    <button class="lang-btn" onclick="setLang('ar')">AR</button>
+  </div>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">HOLISTIC WELLNESS ALLIANCE</div>
+        <h1 class="serif" data-i18n="hero_title">몸·마음·영혼의 <em>균형</em>으로<br>진정한 웰빙을 실현합니다</h1>
+        <p class="hero-desc" data-i18n="hero_desc">홀리스틱웰니스얼라이언스협회는 통합적 웰니스 접근법을 통해 개인과 공동체의 전인적 건강을 증진하는 비영리 협회입니다.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="showPage('membership')" data-i18n="hero_cta1">회원 가입하기</button>
+          <button class="btn btn-outline" onclick="showPage('about')" data-i18n="hero_cta2">협회 소개 보기</button>
+        </div>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label" data-i18n="stat1">WELLNESS PHASES</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">200+</div>
+        <div class="stat-label" data-i18n="stat2">PARTNER MEMBERS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label" data-i18n="stat3">COUNTRIES</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5K+</div>
+        <div class="stat-label" data-i18n="stat4">COMMUNITY</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section mission-section">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-text reveal">
+          <div class="section-tag" data-i18n="mission_tag">MISSION & VISION</div>
+          <h2 data-i18n="mission_title">통합 웰니스로<br>새로운 삶의 기준을</h2>
+          <p data-i18n="mission_p1">홀리스틱웰니스얼라이언스협회는 신체적 건강을 넘어 정신적, 감정적, 영적 웰빙을 통합하는 전인적 접근법을 지향합니다.</p>
+          <p data-i18n="mission_p2">우리는 웰니스를 단순한 트렌드가 아닌 지속 가능한 라이프스타일로 정착시키기 위해 교육, 연구, 커뮤니티를 연결합니다.</p>
+          <div class="mission-values">
+            <div class="value-item">
+              <div class="value-icon">🌿</div>
+              <h4 data-i18n="val1_title">통합성</h4>
+              <p data-i18n="val1_desc">몸·마음·영혼의 균형 있는 통합</p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <h4 data-i18n="val2_title">공동체</h4>
+              <p data-i18n="val2_desc">함께 성장하는 웰니스 생태계</p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🔬</div>
+              <h4 data-i18n="val3_title">근거 기반</h4>
+              <p data-i18n="val3_desc">과학과 전통의 조화로운 융합</p>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🌍</div>
+              <h4 data-i18n="val4_title">지속가능성</h4>
+              <p data-i18n="val4_desc">지구와 인간의 공존하는 웰빙</p>
+            </div>
+          </div>
+        </div>
+        <div class="mission-visual reveal">
+          <div class="big-text">HWA</div>
+          <h3 data-i18n="vision_title">우리의 비전</h3>
+          <p data-i18n="vision_desc">2030년까지 아시아 최대의 홀리스틱 웰니스 생태계를 구축하여, 100만 명의 삶에 전인적 건강의 가치를 전달합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Holistic -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag" data-i18n="why_tag">WHY HOLISTIC</div>
+        <h2 data-i18n="why_title">기존 헬스케어와 무엇이 다른가요?</h2>
+        <p data-i18n="why_desc">홀리스틱 웰니스는 증상 치료를 넘어 삶 전체의 균형을 추구합니다</p>
+      </div>
+      <div class="comparison-table reveal">
+        <div class="comparison-header">
+          <div data-i18n="comp_aspect">비교 항목</div>
+          <div data-i18n="comp_conventional">기존 헬스케어</div>
+          <div data-i18n="comp_holistic">홀리스틱 웰니스</div>
+        </div>
+        <div class="comparison-row">
+          <div data-i18n="comp_r1">접근 방식</div>
+          <div data-i18n="comp_r1_conv">증상 중심 치료</div>
+          <div data-i18n="comp_r1_hol">전인적 근본 원인 해결</div>
+        </div>
+        <div class="comparison-row">
+          <div data-i18n="comp_r2">범위</div>
+          <div data-i18n="comp_r2_conv">신체적 건강만</div>
+          <div data-i18n="comp_r2_hol">몸·마음·영혼·환경 통합</div>
+        </div>
+        <div class="comparison-row">
+          <div data-i18n="comp_r3">지속성</div>
+          <div data-i18n="comp_r3_conv">단기 치료 중심</div>
+          <div data-i18n="comp_r3_hol">평생 웰빙 라이프스타일</div>
+        </div>
+        <div class="comparison-row">
+          <div data-i18n="comp_r4">개인화</div>
+          <div data-i18n="comp_r4_conv">표준화된 프로토콜</div>
+          <div data-i18n="comp_r4_hol">개인 맞춤형 웰니스 여정</div>
+        </div>
+        <div class="comparison-row">
+          <div data-i18n="comp_r5">커뮤니티</div>
+          <div data-i18n="comp_r5_conv">개인 단위 치료</div>
+          <div data-i18n="comp_r5_hol">공동체 기반 성장 지원</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Phases -->
+  <section class="section phases-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag" data-i18n="phases_tag">6 WELLNESS PHASES</div>
+        <h2 data-i18n="phases_title">홀리스틱 웰니스 6단계 여정</h2>
+        <p data-i18n="phases_desc">각 단계는 유기적으로 연결되어 완전한 웰빙을 향한 여정을 안내합니다</p>
+      </div>
+      <div class="phases-grid">
+        <div class="phase-card reveal">
+          <div class="phase-num">01</div>
+          <h3 data-i18n="ph1_title">신체적 웰니스</h3>
+          <p data-i18n="ph1_desc">영양, 운동, 수면, 자연치유를 통한 신체 기반 구축. 몸이 최적의 상태로 기능할 수 있는 토대를 만듭니다.</p>
+          <div class="phase-tags">
+            <span class="phase-tag" data-i18n="ph1_t1">영양</span>
+            <span class="phase-tag" data-i18n="ph1_t2">운동</span>
+            <span class="phase-tag" data-i18n="ph1_t3">수면</span>
+          </div>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num">02</div>
+          <h3 data-i18n="ph2_title">정신적 웰니스</h3>
+          <p data-i18n="ph2_desc">마음챙김, 명상, 인지 건강을 통한 정신적 명료함과 집중력 향상. 스트레스 관리와 정서적 회복력을 키웁니다.</p>
+          <div class="phase-tags">
+            <span class="phase-tag" data-i18n="ph2_t1">명상</span>
+            <span class="phase-tag" data-i18n="ph2_t2">마음챙김</span>
+            <span class="phase-tag" data-i18n="ph2_t3">인지건강</span>
+          </div>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num">03</div>
+          <h3 data-i18n="ph3_title">감정적 웰니스</h3>
+          <p data-i18n="ph3_desc">감정 지능 개발, 관계 건강, 트라우마 치유를 통한 감정적 균형. 진정한 자기 이해와 표현 능력을 기릅니다.</p>
+          <div class="phase-tags">
+            <span class="phase-tag" data-i18n="ph3_t1">감정지능</span>
+            <span class="phase-tag" data-i18n="ph3_t2">관계건강</span>
+            <span class="phase-tag" data-i18n="ph3_t3">치유</span>
+          </div>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num">04</div>
+          <h3 data-i18n="ph4_title">영적 웰니스</h3>
+          <p data-i18n="ph4_desc">삶의 목적과 의미 발견, 내면의 평화와 연결감. 종교를 초월한 보편적 영성으로 삶의 깊이를 더합니다.</p>
+          <div class="phase-tags">
+            <span class="phase-tag" data-i18n="ph4_t1">목적의식</span>
+            <span class="phase-tag" data-i18n="ph4_t2">내면평화</span>
+            <span class="phase-tag" data-i18n="ph4_t3">연결감</span>
+          </div>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num">05</div>
+          <h3 data-i18n="ph5_title">사회적 웰니스</h3>
+          <p data-i18n="ph5_desc">의미 있는 관계 구축, 커뮤니티 참여, 사회적 기여를 통한 연결. 혼자가 아닌 함께하는 웰니스를 실현합니다.</p>
+          <div class="phase-tags">
+            <span class="phase-tag" data-i18n="ph5_t1">커뮤니티</span>
+            <span class="phase-tag" data-i18n="ph5_t2">관계</span>
+            <span class="phase-tag" data-i18n="ph5_t3">사회기여</span>
+          </div>
+        </div>
+        <div class="phase-card reveal">
+          <div class="phase-num">06</div>
+          <h3 data-i18n="ph6_title">환경적 웰니스</h3>
+          <p data-i18n="ph6_desc">자연과의 조화, 지속 가능한 생활 방식, 생태적 의식. 개인의 웰빙이 지구 전체의 건강과 연결됨을 인식합니다.</p>
+          <div class="phase-tags">
+            <span class="phase-tag" data-i18n="ph6_t1">자연치유</span>
+            <span class="phase-tag" data-i18n="ph6_t2">지속가능</span>
+            <span class="phase-tag" data-i18n="ph6_t3">생태의식</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="section-tag" data-i18n="cta_tag">JOIN US</div>
+        <h2 data-i18n="cta_title">웰니스 여정을 함께 시작하세요</h2>
+        <p data-i18n="cta_desc">200개 이상의 파트너 기업과 5,000명의 커뮤니티가 당신을 기다립니다</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <button class="btn btn-gold" onclick="showPage('membership')" data-i18n="cta_btn1">회원 가입하기</button>
+          <button class="btn btn-outline" onclick="showPage('partners')" data-i18n="cta_btn2">파트너 둘러보기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== ABOUT PAGE ===== -->
+<div id="page-about" class="page">
+
+  <div class="about-hero">
+    <div class="section-tag" data-i18n="about_tag">ABOUT HWA</div>
+    <h1 class="serif" data-i18n="about_title">홀리스틱웰니스얼라이언스협회</h1>
+    <p data-i18n="about_desc">통합 웰니스의 새로운 기준을 만들어가는 비영리 협회</p>
+  </div>
+
+  <section class="section journey-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag" data-i18n="journey_tag">6-PHASE JOURNEY</div>
+        <h2 data-i18n="journey_title">웰니스 여정의 6단계</h2>
+        <p data-i18n="journey_desc">각 단계는 유기적으로 연결되어 완전한 웰빙을 향한 여정을 안내합니다</p>
+      </div>
+
+      <div class="journey-timeline">
+        <div class="journey-item reveal">
+          <div class="journey-content-left">
+            <div class="journey-card">
+              <div class="journey-phase-label">PHASE 01</div>
+              <h3 data-i18n="j1_title">신체적 웰니스 기반</h3>
+              <p data-i18n="j1_desc">영양, 운동, 수면의 삼각형을 통해 신체적 건강의 기반을 구축합니다. 자연치유 원리를 바탕으로 몸이 스스로 회복하는 능력을 키웁니다.</p>
+            </div>
+          </div>
+          <div class="journey-center"><div class="journey-dot">1</div></div>
+          <div class="journey-content-right"></div>
+        </div>
+
+        <div class="journey-item reveal">
+          <div class="journey-content-left"></div>
+          <div class="journey-center"><div class="journey-dot">2</div></div>
+          <div class="journey-content-right">
+            <div class="journey-card">
+              <div class="journey-phase-label">PHASE 02</div>
+              <h3 data-i18n="j2_title">정신적 명료함</h3>
+              <p data-i18n="j2_desc">마음챙김과 명상 실천을 통해 정신적 명료함을 얻고 스트레스를 관리합니다. 인지 건강을 위한 과학적 접근법을 적용합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item reveal">
+          <div class="journey-content-left">
+            <div class="journey-card">
+              <div class="journey-phase-label">PHASE 03</div>
+              <h3 data-i18n="j3_title">감정적 균형</h3>
+              <p data-i18n="j3_desc">감정 지능을 개발하고 과거의 트라우마를 치유합니다. 건강한 관계 패턴을 형성하고 진정한 자기 표현을 배웁니다.</p>
+            </div>
+          </div>
+          <div class="journey-center"><div class="journey-dot">3</div></div>
+          <div class="journey-content-right"></div>
+        </div>
+
+        <div class="journey-item reveal">
+          <div class="journey-content-left"></div>
+          <div class="journey-center"><div class="journey-dot">4</div></div>
+          <div class="journey-content-right">
+            <div class="journey-card">
+              <div class="journey-phase-label">PHASE 04</div>
+              <h3 data-i18n="j4_title">영적 연결</h3>
+              <p data-i18n="j4_desc">삶의 목적과 의미를 발견하고 내면의 평화를 찾습니다. 종교를 초월한 보편적 영성으로 삶의 깊이와 방향성을 확립합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item reveal">
+          <div class="journey-content-left">
+            <div class="journey-card">
+              <div class="journey-phase-label">PHASE 05</div>
+              <h3 data-i18n="j5_title">사회적 연결</h3>
+              <p data-i18n="j5_desc">의미 있는 관계를 구축하고 커뮤니티에 기여합니다. 혼자가 아닌 함께하는 웰니스의 힘을 경험합니다.</p>
+            </div>
+          </div>
+          <div class="journey-center"><div class="journey-dot">5</div></div>
+          <div class="journey-content-right"></div>
+        </div>
+
+        <div class="journey-item reveal">
+          <div class="journey-content-left"></div>
+          <div class="journey-center"><div class="journey-dot">6</div></div>
+          <div class="journey-content-right">
+            <div class="journey-card">
+              <div class="journey-phase-label">PHASE 06</div>
+              <h3 data-i18n="j6_title">환경적 조화</h3>
+              <p data-i18n="j6_desc">자연과 조화를 이루며 지속 가능한 삶을 실천합니다. 개인의 웰빙이 지구 전체의 건강과 연결됨을 깨닫고 실천합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container text-center">
+      <h2 data-i18n="about_cta_title">여정을 함께 시작하시겠습니까?</h2>
+      <p data-i18n="about_cta_desc">지금 회원으로 가입하여 6단계 웰니스 여정을 시작하세요</p>
+      <button class="btn btn-gold" onclick="showPage('membership')" data-i18n="about_cta_btn">회원 가입하기</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== PARTNERS PAGE ===== -->
+<div id="page-partners" class="page">
+
+  <div class="partners-hero">
+    <div class="section-tag" data-i18n="partners_tag">OUR PARTNERS</div>
+    <h1 class="serif" data-i18n="partners_title">함께하는 웰니스 파트너</h1>
+    <p data-i18n="partners_desc">홀리스틱 웰니스 생태계를 함께 만들어가는 200개 이상의 파트너 기업과 전문가들을 소개합니다</p>
+    <div class="partners-stats">
+      <div class="partners-stat">
+        <div class="partners-stat-num">200+</div>
+        <div class="partners-stat-label" data-i18n="pstat1">PARTNERS</div>
+      </div>
+      <div class="partners-stat">
+        <div class="partners-stat-num">6</div>
+        <div class="partners-stat-label" data-i18n="pstat2">PHASES</div>
+      </div>
+      <div class="partners-stat">
+        <div class="partners-stat-num">12</div>
+        <div class="partners-stat-label" data-i18n="pstat3">COUNTRIES</div>
+      </div>
+      <div class="partners-stat">
+        <div class="partners-stat-num">50+</div>
+        <div class="partners-stat-label" data-i18n="pstat4">CATEGORIES</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Tabs: Partners / Community -->
+  <div class="partners-tabs-section">
+    <div class="container">
+      <div class="partners-main-tabs">
+        <button class="main-tab-btn active" onclick="switchMainTab('partners-list', this)" data-i18n="ptab_partners">회원사 소개</button>
+        <button class="main-tab-btn" onclick="switchMainTab('community', this)" data-i18n="ptab_community">소통 피드</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partners List Tab -->
+  <div id="tab-partners-list" class="main-tab-content active">
+    <!-- Phase Sub-tabs -->
+    <div class="phase-subtabs-wrap">
+      <div class="container">
+        <div class="phase-subtabs">
+          <button class="phase-sub-btn active" onclick="switchPhase('phase-all', this)" data-i18n="phase_all">전체 보기</button>
+          <button class="phase-sub-btn" onclick="switchPhase('phase-1', this)" data-i18n="phase1_tab">Phase 1 · 신체</button>
+          <button class="phase-sub-btn" onclick="switchPhase('phase-2', this)" data-i18n="phase2_tab">Phase 2 · 정신</button>
+          <button class="phase-sub-btn" onclick="switchPhase('phase-3', this)" data-i18n="phase3_tab">Phase 3 · 감정</button>
+          <button class="phase-sub-btn" onclick="switchPhase('phase-4', this)" data-i18n="phase4_tab">Phase 4 · 영성</button>
+          <button class="phase-sub-btn" onclick="switchPhase('phase-5', this)" data-i18n="phase5_tab">Phase 5 · 사회</button>
+          <button class="phase-sub-btn" onclick="switchPhase('phase-6', this)" data-i18n="phase6_tab">Phase 6 · 환경</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase All -->
+    <div id="phase-all" class="phase-content active">
+      <div class="container">
+        <div class="section-header" style="margin-top:48px;">
+          <h2 data-i18n="all_partners_title">전체 파트너 회원사</h2>
+          <p data-i18n="all_partners_desc">모든 Phase의 파트너 회원사를 한눈에 확인하세요</p>
+        </div>
+        <div class="partners-grid" id="all-partners-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 1 -->
+    <div id="phase-1" class="phase-content">
+      <div class="container">
+        <div class="phase-header">
+          <div class="phase-header-num">01</div>
+          <div class="phase-header-info">
+            <h3 data-i18n="ph1_header_title">신체적 웰니스 파트너</h3>
+            <p data-i18n="ph1_header_desc">영양, 운동, 자연치유, 수면 건강 분야의 전문 파트너 기업들입니다. 신체적 건강의 기반을 구축하는 검증된 솔루션을 제공합니다.</p>
+          </div>
+        </div>
+        <div class="partners-grid" id="phase1-grid"></div>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div id="phase-2" class="phase-content">
+      <div class="container">
+        <div class="phase-header">
+          <div class="phase-header-num">02</div>
+          <div class="phase-header-info">
+            <h3 data-i18n="ph2_header_title">정신적 웰니스 파트너</h3>
+            <p data-i18n="ph2_header_desc">마음챙김, 명상, 인지 건강, 스트레스 관리 분야의 전문 파트너 기업들입니다.</p>
+          </div>
+        </div>
+        <div class="partners-grid" id="phase2-grid"></div>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div id="phase-3" class="phase-content">
+      <div class="container">
+        <div class="phase-header">
+          <div class="phase-header-num">03</div>
+          <div class="phase-header-info">
+            <h3 data-i18n="ph3_header_title">감정적 웰니스 파트너</h3>
+            <p data-i18n="ph3_header_desc">감정 지능 개발, 심리 상담, 트라우마 치유, 관계 건강 분야의 전문 파트너 기업들입니다.</p>
+          </div>
+        </div>
+        <div class="partners-grid" id="phase3-grid"></div>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div id="phase-4" class="phase-content">
+      <div class="container">
+        <div class="phase-header">
+          <div class="phase-header-num">04</div>
+          <div class="phase-header-info">
+            <h3 data-i18n="ph4_header_title">영적 웰니스 파트너</h3>
+            <p data-i18n="ph4_header_desc">명상 센터, 요가 스튜디오, 영성 교육, 내면 탐구 분야의 전문 파트너 기업들입니다.</p>
+          </div>
+        </div>
+        <div class="partners-grid" id="phase4-grid"></div>
+      </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div id="phase-5" class="phase-content">
+      <div class="container">
+        <div class="phase-header">
+          <div class="phase-header-num">05</div>
+          <div class="phase-header-info">
+            <h3 data-i18n="ph5_header_title">사회적 웰니스 파트너</h3>
+            <p data-i18n="ph5_header_desc">커뮤니티 플랫폼, 사회적 기업, 관계 코칭, 공동체 문화 분야의 전문 파트너 기업들입니다.</p>
+          </div>
+        </div>
+        <div class="partners-grid" id="phase5-grid"></div>
+      </div>
+    </div>
+
+    <!-- Phase 6 -->
+    <div id="phase-6" class="phase-content">
+      <div class="container">
+        <div class="phase-header">
+          <div class="phase-header-num">06</div>
+          <div class="phase-header-info">
+            <h3 data-i18n="ph6_header_title">환경적 웰니스 파트너</h3>
+            <p data-i18n="ph6_header_desc">자연치유, 에코 웰니스, 지속 가능한 라이프스타일, 생태 교육 분야의 전문 파트너 기업들입니다.</p>
+          </div>
+        </div>
+        <div class="partners-grid" id="phase6-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Tab -->
+  <div id="tab-community" class="main-tab-content">
+    <div class="community-section">
+      <div class="container">
+
+        <!-- Upload Area -->
+        <div class="community-upload-area" onclick="document.getElementById('fileUploadInput').click()">
+          <div class="upload-icon">📸</div>
+          <h3 data-i18n="upload_title">활동 사진 & 영상 공유하기</h3>
+          <p data-i18n="upload_desc">협회와 회원들의 활동을 커뮤니티와 나눠보세요</p>
+          <div class="upload-types">
+            <span class="upload-type-badge">📷 이미지 (JPG, PNG)</span>
+            <span class="upload-type-badge">🎬 동영상 (MP4, MOV)</span>
+            <span class="upload-type-badge">최대 50MB</span>
+          </div>
+          <button class="btn btn-moss-outline" style="margin-top:20px;" data-i18n="upload_btn">파일 선택하기</button>
+        </div>
+        <input type="file" id="fileUploadInput" accept="image/*,video/*" multiple onchange="handleFileUpload(event)" />
+
+        <!-- Feed -->
+        <div class="feed-header">
+          <h3 data-i18n="feed_title">커뮤니티 피드</h3>
+          <div class="feed-filters">
+            <button class="feed-filter active" onclick="filterFeed('all', this)" data-i18n="filter_all">전체</button>
+            <button class="feed-filter" onclick="filterFeed('image', this)" data-i18n="filter_image">이미지</button>
+            <button class="feed-filter" onclick="filterFeed('video', this)" data-i18n="filter_video">동영상</button>
+          </div>
+        </div>
+
+        <div class="feed-grid" id="feedGrid">
+          <!-- Sample posts -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== MEMBERSHIP PAGE ===== -->
+<div id="page-membership" class="page">
+
+  <div class="membership-hero">
+    <div class="section-tag" data-i18n="mem_tag">MEMBERSHIP</div>
+    <h1 class="serif" data-i18n="mem_title">웰니스 여정의 동반자가 되어주세요</h1>
+    <p data-i18n="mem_desc">세 가지 회원 등급으로 당신에게 맞는 웰니스 여정을 시작하세요</p>
+  </div>
+
+  <section class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="membership-cards">
+        <div class="membership-card reveal">
+          <div class="membership-tier" data-i18n="tier1">ASSOCIATE</div>
+          <h3 data-i18n="tier1_name">어소시에이트</h3>
+          <p style="font-size:14px;color:var(--charcoal-light);" data-i18n="tier1_desc">웰니스 여정을 시작하는 분들을 위한 입문 멤버십</p>
+          <div class="membership-price">무료 <span data-i18n="tier_free">/ 연간</span></div>
+          <ul class="membership-features">
+            <li data-i18n="tier1_f1">커뮤니티 피드 접근</li>
+            <li data-i18n="tier1_f2">월간 웰니스 뉴스레터</li>
+            <li data-i18n="tier1_f3">기본 교육 콘텐츠</li>
+            <li class="disabled" data-i18n="tier1_f4">파트너 할인 혜택</li>
+            <li class="disabled" data-i18n="tier1_f5">전문가 네트워킹</li>
+          </ul>
+          <button class="btn btn-moss-outline" style="width:100%;" onclick="showPage('contact')" data-i18n="tier_apply">신청하기</button>
+        </div>
+
+        <div class="membership-card featured reveal" data-badge="MOST POPULAR">
+          <div class="membership-tier" data-i18n="tier2">PRACTITIONER</div>
+          <h3 data-i18n="tier2_name">프랙티셔너</h3>
+          <p style="font-size:14px;color:var(--charcoal-light);" data-i18n="tier2_desc">웰니스 전문가와 적극적인 실천자를 위한 멤버십</p>
+          <div class="membership-price">₩120,000 <span data-i18n="tier_year">/ 연간</span></div>
+          <ul class="membership-features">
+            <li data-i18n="tier2_f1">어소시에이트 모든 혜택</li>
+            <li data-i18n="tier2_f2">파트너사 15% 할인</li>
+            <li data-i18n="tier2_f3">월간 전문가 세미나</li>
+            <li data-i18n="tier2_f4">인증 프로그램 참여</li>
+            <li data-i18n="tier2_f5">전문가 네트워킹 이벤트</li>
+          </ul>
+          <button class="btn btn-gold" style="width:100%;" onclick="showPage('contact')" data-i18n="tier_apply">신청하기</button>
+        </div>
+
+        <div class="membership-card reveal">
+          <div class="membership-tier" data-i18n="tier3">ALLIANCE PARTNER</div>
+          <h3 data-i18n="tier3_name">얼라이언스 파트너</h3>
+          <p style="font-size:14px;color:var(--charcoal-light);" data-i18n="tier3_desc">기업 및 기관 파트너를 위한 프리미엄 멤버십</p>
+          <div class="membership-price">₩600,000 <span data-i18n="tier_year">/ 연간</span></div>
+          <ul class="membership-features">
+            <li data-i18n="tier3_f1">프랙티셔너 모든 혜택</li>
+            <li data-i18n="tier3_f2">PARTNERS 페이지 등재</li>
+            <li data-i18n="tier3_f3">공동 마케팅 기회</li>
+            <li data-i18n="tier3_f4">우선 협력 프로젝트</li>
+            <li data-i18n="tier3_f5">연간 전략 컨설팅</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%;" onclick="showPage('contact')" data-i18n="tier_apply">신청하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section form-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag" data-i18n="form_tag">APPLICATION</div>
+        <h2 data-i18n="form_title">회원 가입 신청</h2>
+        <p data-i18n="form_desc">아래 양식을 작성하시면 담당자가 3일 이내에 연락드립니다</p>
+      </div>
+      <div class="form-card reveal">
+        <form onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_name">이름 / 기관명</label>
+              <input type="text" class="form-input" placeholder="홍길동 / (주)웰니스코리아" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_email">이메일</label>
+              <input type="email" class="form-input" placeholder="wellness@example.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_phone">연락처</label>
+              <input type="tel" class="form-input" placeholder="010-0000-0000" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_tier">희망 등급</label>
+              <select class="form-select">
+                <option data-i18n="tier1">어소시에이트 (무료)</option>
+                <option data-i18n="tier2">프랙티셔너 (₩120,000/년)</option>
+                <option data-i18n="tier3">얼라이언스 파트너 (₩600,000/년)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_field">전문 분야 / 업종</label>
+            <input type="text" class="form-input" placeholder="예: 영양 상담, 요가 스튜디오, 자연치유 센터" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_message">가입 동기 및 활동 계획</label>
+            <textarea class="form-textarea" placeholder="협회 가입을 원하시는 이유와 함께하고 싶은 활동을 자유롭게 적어주세요."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-i18n="form_submit">신청서 제출하기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== CONTACT PAGE ===== -->
+<div id="page-contact" class="page">
+
+  <div class="contact-hero">
+    <div class="section-tag" data-i18n="contact_tag">CONTACT</div>
+    <h1 class="serif" data-i18n="contact_title">함께 이야기 나눠요</h1>
+    <p data-i18n="contact_desc">협회에 대한 궁금한 점이나 협력 제안을 편하게 보내주세요</p>
+  </div>
+
+  <section class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card reveal">
+          <h3 data-i18n="contact_info_title">연락처 정보</h3>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4 data-i18n="contact_addr_label">주소</h4>
+              <p>경기도 가평군 설악면<br>한서로375번길 95-23<br>마이헤이븐 은천재</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4 data-i18n="contact_email_label">이메일</h4>
+              <p>quester.bridgeit@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🌿</div>
+            <div>
+              <h4 data-i18n="contact_hours_label">운영 시간</h4>
+              <p data-i18n="contact_hours">월–금 09:00–18:00<br>토 10:00–15:00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card reveal" style="box-shadow:none;">
+          <form onsubmit="submitContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_name">이름</label>
+                <input type="text" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_email">이메일</label>
+                <input type="email" class="form-input" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_subject">문의 유형</label>
+              <select class="form-select">
+                <option data-i18n="ctype1">회원 가입 문의</option>
+                <option data-i18n="ctype2">파트너십 제안</option>
+                <option data-i18n="ctype3">교육 프로그램 문의</option>
+                <option data-i18n="ctype4">기타 문의</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="form_message">메시지</label>
+              <textarea class="form-textarea" rows="6"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-i18n="contact_submit">메시지 보내기</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-32 reveal">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="faq_tag">FAQ</div>
+          <h2 data-i18n="faq_title">자주 묻는 질문</h2>
+        </div>
+        <div id="faqList">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq1_q">홀리스틱웰니스얼라이언스협회는 어떤 단체인가요?</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer" data-i18n="faq1_a">홀리스틱웰니스얼라이언스협회(HWA)는 통합적 웰니스 접근법을 통해 개인과 공동체의 전인적 건강을 증진하는 비영리 협회입니다. 신체, 정신, 감정, 영성, 사회, 환경의 6개 영역을 통합하는 웰니스 생태계를 구축합니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq2_q">파트너 회원사로 등록하려면 어떻게 하나요?</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer" data-i18n="faq2_a">얼라이언스 파트너 등급으로 가입하시면 PARTNERS 페이지에 회원사로 등재됩니다. 회원 가입 신청 양식을 작성하시거나 이메일로 문의해 주세요.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq3_q">어떤 분야의 기업/전문가가 파트너로 참여할 수 있나요?</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer" data-i18n="faq3_a">영양, 운동, 명상, 요가, 자연치유, 심리상담, 코칭, 에코 웰니스 등 홀리스틱 웰니스와 관련된 모든 분야의 기업과 전문가가 참여 가능합니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq4_q">협회 활동은 어떻게 이루어지나요?</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer" data-i18n="faq4_a">정기 세미나, 워크숍, 온라인 교육, 커뮤니티 이벤트, 파트너 네트워킹 등 다양한 활동을 진행합니다. 경기도 가평 마이헤이븐 은천재에서 오프라인 프로그램도 운영합니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-main">HOLISTIC WELLNESS ALLIANCE</div>
+        <div class="logo-sub">홀리스틱웰니스얼라이언스협회</div>
+        <p data-i18n="footer_desc">통합 홀리스틱 웰니스를 위한 비영리 협회. 몸·마음·영혼의 균형을 통해 진정한 웰빙을 실현합니다.</p>
+        <div class="footer-contact" style="margin-top:20px;">
+          <div>📍 경기도 가평군 설악면 한서로375번길 95-23 마이헤이븐 은천재</div>
+          <div>✉️ quester.bridgeit@gmail.com</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_nav">NAVIGATION</h4>
+        <ul>
+          <li><span onclick="showPage('home')" data-i18n="nav_home">HOME</span></li>
+          <li><span onclick="showPage('about')" data-i18n="nav_about">ABOUT</span></li>
+          <li><span onclick="showPage('partners')" data-i18n="nav_partners">PARTNERS</span></li>
+          <li><span onclick="showPage('membership')" data-i18n="nav_membership">MEMBERSHIP</span></li>
+          <li><span onclick="showPage('contact')" data-i18n="nav_contact">CONTACT</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_phases">PHASES</h4>
+        <ul>
+          <li><span data-i18n="ph1_title">신체적 웰니스</span></li>
+          <li><span data-i18n="ph2_title">정신적 웰니스</span></li>
+          <li><span data-i18n="ph3_title">감정적 웰니스</span></li>
+          <li><span data-i18n="ph4_title">영적 웰니스</span></li>
+          <li><span data-i18n="ph5_title">사회적 웰니스</span></li>
+          <li><span data-i18n="ph6_title">환경적 웰니스</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_membership">MEMBERSHIP</h4>
+        <ul>
+          <li><span onclick="showPage('membership')" data-i18n="tier1_name">어소시에이트</span></li>
+          <li><span onclick="showPage('membership')" data-i18n="tier2_name">프랙티셔너</span></li>
+          <li><span onclick="showPage('membership')" data-i18n="tier3_name">얼라이언스 파트너</span></li>
+          <li><span onclick="showPage('contact')" data-i18n="nav_contact">문의하기</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Holistic Wellness Alliance Association. All rights reserved.</p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4);" data-i18n="footer_copy">비영리 사단법인 | 사업자등록번호 준비 중</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Partner Modal -->
+<div class="modal-overlay" id="partnerModal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <button class="modal-close" onclick="document.getElementById('partnerModal').classList.remove('open')">✕</button>
+      <div class="modal-logo" id="modalLogo">🌿</div>
+      <h2 id="modalName">파트너명</h2>
+      <p id="modalCategory">카테고리</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4 data-i18n="modal_about">ABOUT</h4>
+        <p id="modalDesc"></p>
+      </div>
+      <div class="modal-section">
+        <h4 data-i18n="modal_highlights">HIGHLIGHTS</h4>
+        <div class="modal-highlights" id="modalHighlights"></div>
+      </div>
+      <div class="modal-section">
+        <h4 data-i18n="modal_services">SERVICES</h4>
+        <p id="modalServices"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-moss-outline" onclick="document.getElementById('partnerModal').classList.remove('open')" data-i18n="modal_close">닫기</button>
+      <a id="modalVisitBtn" href="#" target="_blank" class="btn btn-primary" data-i18n="modal_visit">웹사이트 방문하기 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== I18N DATA =====
+const i18n = {
+  ko: {
+    logo_main: 'HOLISTIC WELLNESS ALLIANCE',
+    logo_sub: '홀리스틱웰니스얼라이언스협회',
+    nav_home: 'HOME', nav_about: 'ABOUT', nav_partners: 'PARTNERS',
+    nav_membership: 'MEMBERSHIP', nav_contact: 'CONTACT',
+    hero_badge: 'HOLISTIC WELLNESS ALLIANCE',
+    hero_title: '몸·마음·영혼의 <em>균형</em>으로<br>진정한 웰빙을 실현합니다',
+    hero_desc: '홀리스틱웰니스얼라이언스협회는 통합적 웰니스 접근법을 통해 개인과 공동체의 전인적 건강을 증진하는 비영리 협회입니다.',
+    hero_cta1: '회원 가입하기', hero_cta2: '협회 소개 보기',
+    stat1: 'WELLNESS PHASES', stat2: 'PARTNER MEMBERS', stat3: 'COUNTRIES', stat4: 'COMMUNITY',
+    mission_tag: 'MISSION & VISION',
+    mission_title: '통합 웰니스로<br>새로운 삶의 기준을',
+    mission_p1: '홀리스틱웰니스얼라이언스협회는 신체적 건강을 넘어 정신적, 감정적, 영적 웰빙을 통합하는 전인적 접근법을 지향합니다.',
+    mission_p2: '우리는 웰니스를 단순한 트렌드가 아닌 지속 가능한 라이프스타일로 정착시키기 위해 교육, 연구, 커뮤니티를 연결합니다.',
+    val1_title: '통합성', val1_desc: '몸·마음·영혼의 균형 있는 통합',
+    val2_title: '공동체', val2_desc: '함께 성장하는 웰니스 생태계',
+    val3_title: '근거 기반', val3_desc: '과학과 전통의 조화로운 융합',
+    val4_title: '지속가능성', val4_desc: '지구와 인간의 공존하는 웰빙',
+    vision_title: '우리의 비전',
+    vision_desc: '2030년까지 아시아 최대의 홀리스틱 웰니스 생태계를 구축하여, 100만 명의 삶에 전인적 건강의 가치를 전달합니다.',
+    why_tag: 'WHY HOLISTIC',
+    why_title: '기존 헬스케어와 무엇이 다른가요?',
+    why_desc: '홀리스틱 웰니스는 증상 치료를 넘어 삶 전체의 균형을 추구합니다',
+    comp_aspect: '비교 항목', comp_conventional: '기존 헬스케어', comp_holistic: '홀리스틱 웰니스',
+    comp_r1: '접근 방식', comp_r1_conv: '증상 중심 치료', comp_r1_hol: '전인적 근본 원인 해결',
+    comp_r2: '범위', comp_r2_conv: '신체적 건강만', comp_r2_hol: '몸·마음·영혼·환경 통합',
+    comp_r3: '지속성', comp_r3_conv: '단기 치료 중심', comp_r3_hol: '평생 웰빙 라이프스타일',
+    comp_r4: '개인화', comp_r4_conv: '표준화된 프로토콜', comp_r4_hol: '개인 맞춤형 웰니스 여정',
+    comp_r5: '커뮤니티', comp_r5_conv: '개인 단위 치료', comp_r5_hol: '공동체 기반 성장 지원',
+    phases_tag: '6 WELLNESS PHASES',
+    phases_title: '홀리스틱 웰니스 6단계 여정',
+    phases_desc: '각 단계는 유기적으로 연결되어 완전한 웰빙을 향한 여정을 안내합니다',
+    ph1_title: '신체적 웰니스', ph1_desc: '영양, 운동, 수면, 자연치유를 통한 신체 기반 구축.',
+    ph1_t1: '영양', ph1_t2: '운동', ph1_t3: '수면',
+    ph2_title: '정신적 웰니스', ph2_desc: '마음챙김, 명상, 인지 건강을 통한 정신적 명료함.',
+    ph2_t1: '명상', ph2_t2: '마음챙김', ph2_t3: '인지건강',
+    ph3_title: '감정적 웰니스', ph3_desc: '감정 지능 개발, 관계 건강, 트라우마 치유.',
+    ph3_t1: '감정지능', ph3_t2: '관계건강', ph3_t3: '치유',
+    ph4_title: '영적 웰니스', ph4_desc: '삶의 목적과 의미 발견, 내면의 평화와 연결감.',
+    ph4_t1: '목적의식', ph4_t2: '내면평화', ph4_t3: '연결감',
+    ph5_title: '사회적 웰니스', ph5_desc: '의미 있는 관계 구축, 커뮤니티 참여, 사회적 기여.',
+    ph5_t1: '커뮤니티', ph5_t2: '관계', ph5_t3: '사회기여',
+    ph6_title: '환경적 웰니스', ph6_desc: '자연과의 조화, 지속 가능한 생활 방식, 생태적 의식.',
+    ph6_t1: '자연치유', ph6_t2: '지속가능', ph6_t3: '생태의식',
+    cta_tag: 'JOIN US',
+    cta_title: '웰니스 여정을 함께 시작하세요',
+    cta_desc: '200개 이상의 파트너 기업과 5,000명의 커뮤니티가 당신을 기다립니다',
+    cta_btn1: '회원 가입하기', cta_btn2: '파트너 둘러보기',
+    about_tag: 'ABOUT HWA',
+    about_title: '홀리스틱웰니스얼라이언스협회',
+    about_desc: '통합 웰니스의 새로운 기준을 만들어가는 비영리 협회',
+    journey_tag: '6-PHASE JOURNEY',
+    journey_title: '웰니스 여정의 6단계',
+    journey_desc: '각 단계는 유기적으로 연결되어 완전한 웰빙을 향한 여정을 안내합니다',
+    j1_title: '신체적 웰니스 기반', j1_desc: '영양, 운동, 수면의 삼각형을 통해 신체적 건강의 기반을 구축합니다.',
+    j2_title: '정신적 명료함', j2_desc: '마음챙김과 명상 실천을 통해 정신적 명료함을 얻고 스트레스를 관리합니다.',
+    j3_title: '감정적 균형', j3_desc: '감정 지능을 개발하고 과거의 트라우마를 치유합니다.',
+    j4_title: '영적 연결', j4_desc: '삶의 목적과 의미를 발견하고 내면의 평화를 찾습니다.',
+    j5_title: '사회적 연결', j5_desc: '의미 있는 관계를 구축하고 커뮤니티에 기여합니다.',
+    j6_title: '환경적 조화', j6_desc: '자연과 조화를 이루며 지속 가능한 삶을 실천합니다.',
+    about_cta_title: '여정을 함께 시작하시겠습니까?',
+    about_cta_desc: '지금 회원으로 가입하여 6단계 웰니스 여정을 시작하세요',
+    about_cta_btn: '회원 가입하기',
+    partners_tag: 'OUR PARTNERS',
+    partners_title: '함께하는 웰니스 파트너',
+    partners_desc: '홀리스틱 웰니스 생태계를 함께 만들어가는 200개 이상의 파트너 기업과 전문가들을 소개합니다',
+    pstat1: 'PARTNERS', pstat2: 'PHASES', pstat3: 'COUNTRIES', pstat4: 'CATEGORIES',
+    ptab_partners: '회원사 소개', ptab_community: '소통 피드',
+    phase_all: '전체 보기',
+    phase1_tab: 'Phase 1 · 신체', phase2_tab: 'Phase 2 · 정신',
+    phase3_tab: 'Phase 3 · 감정', phase4_tab: 'Phase 4 · 영성',
+    phase5_tab: 'Phase 5 · 사회', phase6_tab: 'Phase 6 · 환경',
+    all_partners_title: '전체 파트너 회원사',
+    all_partners_desc: '모든 Phase의 파트너 회원사를 한눈에 확인하세요',
+    ph1_header_title: '신체적 웰니스 파트너',
+    ph1_header_desc: '영양, 운동, 자연치유, 수면 건강 분야의 전문 파트너 기업들입니다.',
+    ph2_header_title: '정신적 웰니스 파트너',
+    ph2_header_desc: '마음챙김, 명상, 인지 건강, 스트레스 관리 분야의 전문 파트너 기업들입니다.',
+    ph3_header_title: '감정적 웰니스 파트너',
+    ph3_header_desc: '감정 지능 개발, 심리 상담, 트라우마 치유, 관계 건강 분야의 전문 파트너 기업들입니다.',
+    ph4_header_title: '영적 웰니스 파트너',
+    ph4_header_desc: '명상 센터, 요가 스튜디오, 영성 교육, 내면 탐구 분야의 전문 파트너 기업들입니다.',
+    ph5_header_title: '사회적 웰니스 파트너',
+    ph5_header_desc: '커뮤니티 플랫폼, 사회적 기업, 관계 코칭, 공동체 문화 분야의 전문 파트너 기업들입니다.',
+    ph6_header_title: '환경적 웰니스 파트너',
+    ph6_header_desc: '자연치유, 에코 웰니스, 지속 가능한 라이프스타일, 생태 교육 분야의 전문 파트너 기업들입니다.',
+    upload_title: '활동 사진 & 영상 공유하기',
+    upload_desc: '협회와 회원들의 활동을 커뮤니티와 나눠보세요',
+    upload_btn: '파일 선택하기',
+    feed_title: '커뮤니티 피드',
+    filter_all: '전체', filter_image: '이미지', filter_video: '동영상',
+    mem_tag: 'MEMBERSHIP',
+    mem_title: '웰니스 여정의 동반자가 되어주세요',
+    mem_desc: '세 가지 회원 등급으로 당신에게 맞는 웰니스 여정을 시작하세요',
+    tier1: 'ASSOCIATE', tier1_name: '어소시에이트',
+    tier1_desc: '웰니스 여정을 시작하는 분들을 위한 입문 멤버십',
+    tier_free: '/ 연간',
+    tier1_f1: '커뮤니티 피드 접근', tier1_f2: '월간 웰니스 뉴스레터',
+    tier1_f3: '기본 교육 콘텐츠', tier1_f4: '파트너 할인 혜택', tier1_f5: '전문가 네트워킹',
+    tier2: 'PRACTITIONER', tier2_name: '프랙티셔너',
+    tier2_desc: '웰니스 전문가와 적극적인 실천자를 위한 멤버십',
+    tier_year: '/ 연간',
+    tier2_f1: '어소시에이트 모든 혜택', tier2_f2: '파트너사 15% 할인',
+    tier2_f3: '월간 전문가 세미나', tier2_f4: '인증 프로그램 참여', tier2_f5: '전문가 네트워킹 이벤트',
+    tier3: 'ALLIANCE PARTNER', tier3_name: '얼라이언스 파트너',
+    tier3_desc: '기업 및 기관 파트너를 위한 프리미엄 멤버십',
+    tier3_f1: '프랙티셔너 모든 혜택', tier3_f2: 'PARTNERS 페이지 등재',
+    tier3_f3: '공동 마케팅 기회', tier3_f4: '우선 협력 프로젝트', tier3_f5: '연간 전략 컨설팅',
+    tier_apply: '신청하기',
+    form_tag: 'APPLICATION', form_title: '회원 가입 신청',
+    form_desc: '아래 양식을 작성하시면 담당자가 3일 이내에 연락드립니다',
+    form_name: '이름 / 기관명', form_email: '이메일', form_phone: '연락처',
+    form_tier: '희망 등급', form_field: '전문 분야 / 업종',
+    form_message: '가입 동기 및 활동 계획', form_submit: '신청서 제출하기',
+    contact_tag: 'CONTACT', contact_title: '함께 이야기 나눠요',
+    contact_desc: '협회에 대한 궁금한 점이나 협력 제안을 편하게 보내주세요',
+    contact_info_title: '연락처 정보',
+    contact_addr_label: '주소', contact_email_label: '이메일', contact_hours_label: '운영 시간',
+    contact_hours: '월–금 09:00–18:00\n토 10:00–15:00',
+    contact_subject: '문의 유형',
+    ctype1: '회원 가입 문의', ctype2: '파트너십 제안',
+    ctype3: '교육 프로그램 문의', ctype4: '기타 문의',
+    contact_submit: '메시지 보내기',
+    faq_tag: 'FAQ', faq_title: '자주 묻는 질문',
+    faq1_q: '홀리스틱웰니스얼라이언스협회는 어떤 단체인가요?',
+    faq1_a: 'HWA는 통합적 웰니스 접근법을 통해 개인과 공동체의 전인적 건강을 증진하는 비영리 협회입니다.',
+    faq2_q: '파트너 회원사로 등록하려면 어떻게 하나요?',
+    faq2_a: '얼라이언스 파트너 등급으로 가입하시면 PARTNERS 페이지에 회원사로 등재됩니다.',
+    faq3_q: '어떤 분야의 기업/전문가가 파트너로 참여할 수 있나요?',
+    faq3_a: '영양, 운동, 명상, 요가, 자연치유, 심리상담, 코칭, 에코 웰니스 등 홀리스틱 웰니스 관련 모든 분야.',
+    faq4_q: '협회 활동은 어떻게 이루어지나요?',
+    faq4_a: '정기 세미나, 워크숍, 온라인 교육, 커뮤니티 이벤트, 파트너 네트워킹 등 다양한 활동을 진행합니다.',
+    footer_desc: '통합 홀리스틱 웰니스를 위한 비영리 협회. 몸·마음·영혼의 균형을 통해 진정한 웰빙을 실현합니다.',
+    footer_nav: 'NAVIGATION', footer_phases: 'PHASES', footer_membership: 'MEMBERSHIP',
+    footer_copy: '비영리 사단법인 | 사업자등록번호 준비 중',
+    modal_about: 'ABOUT', modal_highlights: 'HIGHLIGHTS', modal_services: 'SERVICES',
+    modal_close: '닫기', modal_visit: '웹사이트 방문하기 →',
+    share_kakao: '카카오톡 공유', share_copy: '링크 복사', share_twitter: 'X(트위터) 공유',
+    comment_placeholder: '댓글을 입력하세요...', comment_submit: '등록',
+    like_btn: '좋아요', comment_btn: '댓글', share_btn: '공유',
+  },
+  en: {
+    logo_main: 'HOLISTIC WELLNESS ALLIANCE',
+    logo_sub: 'Association',
+    nav_home: 'HOME', nav_about: 'ABOUT', nav_partners: 'PARTNERS',
+    nav_membership: 'MEMBERSHIP', nav_contact: 'CONTACT',
+    hero_badge: 'HOLISTIC WELLNESS ALLIANCE',
+    hero_title: 'Realizing True Wellbeing Through <em>Balance</em> of Body, Mind & Soul',
+    hero_desc: 'HWA is a non-profit association dedicated to promoting holistic health for individuals and communities through an integrative wellness approach.',
+    hero_cta1: 'Join Now', hero_cta2: 'Learn More',
+    stat1: 'WELLNESS PHASES', stat2: 'PARTNER MEMBERS', stat3: 'COUNTRIES', stat4: 'COMMUNITY',
+    mission_tag: 'MISSION & VISION',
+    mission_title: 'A New Standard of Life<br>Through Integrative Wellness',
+    mission_p1: 'HWA pursues a holistic approach that integrates mental, emotional, and spiritual wellbeing beyond physical health.',
+    mission_p2: 'We connect education, research, and community to establish wellness as a sustainable lifestyle.',
+    val1_title: 'Integration', val1_desc: 'Balanced integration of body, mind & soul',
+    val2_title: 'Community', val2_desc: 'A wellness ecosystem growing together',
+    val3_title: 'Evidence-Based', val3_desc: 'Harmonious fusion of science and tradition',
+    val4_title: 'Sustainability', val4_desc: 'Wellbeing that coexists with the earth',
+    vision_title: 'Our Vision',
+    vision_desc: 'Build Asia\'s largest holistic wellness ecosystem by 2030, delivering the value of whole-person health to 1 million lives.',
+    why_tag: 'WHY HOLISTIC',
+    why_title: 'How Is It Different from Conventional Healthcare?',
+    why_desc: 'Holistic wellness seeks balance across all of life, beyond symptom treatment',
+    comp_aspect: 'Aspect', comp_conventional: 'Conventional', comp_holistic: 'Holistic Wellness',
+    comp_r1: 'Approach', comp_r1_conv: 'Symptom-focused treatment', comp_r1_hol: 'Holistic root cause resolution',
+    comp_r2: 'Scope', comp_r2_conv: 'Physical health only', comp_r2_hol: 'Body·Mind·Soul·Environment',
+    comp_r3: 'Duration', comp_r3_conv: 'Short-term treatment', comp_r3_hol: 'Lifelong wellness lifestyle',
+    comp_r4: 'Personalization', comp_r4_conv: 'Standardized protocols', comp_r4_hol: 'Personalized wellness journey',
+    comp_r5: 'Community', comp_r5_conv: 'Individual treatment', comp_r5_hol: 'Community-based growth support',
+    phases_tag: '6 WELLNESS PHASES',
+    phases_title: '6-Phase Holistic Wellness Journey',
+    phases_desc: 'Each phase is organically connected to guide the journey toward complete wellbeing',
+    ph1_title: 'Physical Wellness', ph1_desc: 'Building a physical foundation through nutrition, exercise, sleep, and natural healing.',
+    ph1_t1: 'Nutrition', ph1_t2: 'Exercise', ph1_t3: 'Sleep',
+    ph2_title: 'Mental Wellness', ph2_desc: 'Enhancing mental clarity and focus through mindfulness, meditation, and cognitive health.',
+    ph2_t1: 'Meditation', ph2_t2: 'Mindfulness', ph2_t3: 'Cognitive Health',
+    ph3_title: 'Emotional Wellness', ph3_desc: 'Emotional balance through emotional intelligence development, relationship health, and trauma healing.',
+    ph3_t1: 'Emotional IQ', ph3_t2: 'Relationships', ph3_t3: 'Healing',
+    ph4_title: 'Spiritual Wellness', ph4_desc: 'Discovering purpose and meaning, inner peace and connection.',
+    ph4_t1: 'Purpose', ph4_t2: 'Inner Peace', ph4_t3: 'Connection',
+    ph5_title: 'Social Wellness', ph5_desc: 'Building meaningful relationships, community engagement, and social contribution.',
+    ph5_t1: 'Community', ph5_t2: 'Relationships', ph5_t3: 'Contribution',
+    ph6_title: 'Environmental Wellness', ph6_desc: 'Harmony with nature, sustainable lifestyle, and ecological awareness.',
+    ph6_t1: 'Nature Healing', ph6_t2: 'Sustainable', ph6_t3: 'Eco-Awareness',
+    cta_tag: 'JOIN US',
+    cta_title: 'Start Your Wellness Journey Together',
+    cta_desc: 'Over 200 partner companies and 5,000 community members are waiting for you',
+    cta_btn1: 'Join Now', cta_btn2: 'Explore Partners',
+    about_tag: 'ABOUT HWA',
+    about_title: 'Holistic Wellness Alliance',
+    about_desc: 'A non-profit association creating new standards in integrative wellness',
+    journey_tag: '6-PHASE JOURNEY', journey_title: '6 Phases of Wellness Journey',
+    journey_desc: 'Each phase is organically connected to guide the journey toward complete wellbeing',
+    j1_title: 'Physical Wellness Foundation', j1_desc: 'Building the foundation of physical health through the triangle of nutrition, exercise, and sleep.',
+    j2_title: 'Mental Clarity', j2_desc: 'Gaining mental clarity and managing stress through mindfulness and meditation practice.',
+    j3_title: 'Emotional Balance', j3_desc: 'Developing emotional intelligence and healing past traumas.',
+    j4_title: 'Spiritual Connection', j4_desc: 'Discovering the purpose and meaning of life and finding inner peace.',
+    j5_title: 'Social Connection', j5_desc: 'Building meaningful relationships and contributing to the community.',
+    j6_title: 'Environmental Harmony', j6_desc: 'Living in harmony with nature and practicing a sustainable lifestyle.',
+    about_cta_title: 'Ready to Start the Journey Together?',
+    about_cta_desc: 'Join as a member now and start your 6-phase wellness journey',
+    about_cta_btn: 'Join Now',
+    partners_tag: 'OUR PARTNERS',
+    partners_title: 'Our Wellness Partners',
+    partners_desc: 'Introducing 200+ partner companies and professionals building the holistic wellness ecosystem together',
+    pstat1: 'PARTNERS', pstat2: 'PHASES', pstat3: 'COUNTRIES', pstat4: 'CATEGORIES',
+    ptab_partners: 'Partner Members', ptab_community: 'Community Feed',
+    phase_all: 'All',
+    phase1_tab: 'Phase 1 · Physical', phase2_tab: 'Phase 2 · Mental',
+    phase3_tab: 'Phase 3 · Emotional', phase4_tab: 'Phase 4 · Spiritual',
+    phase5_tab: 'Phase 5 · Social', phase6_tab: 'Phase 6 · Environmental',
+    all_partners_title: 'All Partner Members',
+    all_partners_desc: 'View all partner members across all phases at a glance',
+    ph1_header_title: 'Physical Wellness Partners',
+    ph1_header_desc: 'Expert partner companies in nutrition, exercise, natural healing, and sleep health.',
+    ph2_header_title: 'Mental Wellness Partners',
+    ph2_header_desc: 'Expert partner companies in mindfulness, meditation, cognitive health, and stress management.',
+    ph3_header_title: 'Emotional Wellness Partners',
+    ph3_header_desc: 'Expert partner companies in emotional intelligence, counseling, trauma healing, and relationship health.',
+    ph4_header_title: 'Spiritual Wellness Partners',
+    ph4_header_desc: 'Expert partner companies in meditation centers, yoga studios, spiritual education, and inner exploration.',
+    ph5_header_title: 'Social Wellness Partners',
+    ph5_header_desc: 'Expert partner companies in community platforms, social enterprises, relationship coaching, and community culture.',
+    ph6_header_title: 'Environmental Wellness Partners',
+    ph6_header_desc: 'Expert partner companies in nature healing, eco wellness, sustainable lifestyle, and ecological education.',
+    upload_title: 'Share Activity Photos & Videos',
+    upload_desc: 'Share association and member activities with the community',
+    upload_btn: 'Select Files',
+    feed_title: 'Community Feed',
+    filter_all: 'All', filter_image: 'Images', filter_video: 'Videos',
+    mem_tag: 'MEMBERSHIP',
+    mem_title: 'Be a Companion on the Wellness Journey',
+    mem_desc: 'Start your wellness journey with three membership tiers',
+    tier1: 'ASSOCIATE', tier1_name: 'Associate',
+    tier1_desc: 'Introductory membership for those starting their wellness journey',
+    tier_free: '/ year',
+    tier1_f1: 'Community feed access', tier1_f2: 'Monthly wellness newsletter',
+    tier1_f3: 'Basic educational content', tier1_f4: 'Partner discounts', tier1_f5: 'Expert networking',
+    tier2: 'PRACTITIONER', tier2_name: 'Practitioner',
+    tier2_desc: 'Membership for wellness professionals and active practitioners',
+    tier_year: '/ year',
+    tier2_f1: 'All Associate benefits', tier2_f2: '15% partner discount',
+    tier2_f3: 'Monthly expert seminars', tier2_f4: 'Certification programs', tier2_f5: 'Expert networking events',
+    tier3: 'ALLIANCE PARTNER', tier3_name: 'Alliance Partner',
+    tier3_desc: 'Premium membership for corporate and institutional partners',
+    tier3_f1: 'All Practitioner benefits', tier3_f2: 'PARTNERS page listing',
+    tier3_f3: 'Co-marketing opportunities', tier3_f4: 'Priority collaboration', tier3_f5: 'Annual strategic consulting',
+    tier_apply: 'Apply Now',
+    form_tag: 'APPLICATION', form_title: 'Membership Application',
+    form_desc: 'Fill out the form below and our team will contact you within 3 business days',
+    form_name: 'Name / Organization', form_email: 'Email', form_phone: 'Phone',
+    form_tier: 'Desired Tier', form_field: 'Field / Industry',
+    form_message: 'Motivation & Activity Plan', form_submit: 'Submit Application',
+    contact_tag: 'CONTACT', contact_title: "Let's Talk",
+    contact_desc: 'Feel free to send us questions or partnership proposals',
+    contact_info_title: 'Contact Information',
+    contact_addr_label: 'Address', contact_email_label: 'Email', contact_hours_label: 'Hours',
+    contact_hours: 'Mon–Fri 09:00–18:00\nSat 10:00–15:00',
+    contact_subject: 'Inquiry Type',
+    ctype1: 'Membership Inquiry', ctype2: 'Partnership Proposal',
+    ctype3: 'Education Program', ctype4: 'Other',
+    contact_submit: 'Send Message',
+    faq_tag: 'FAQ', faq_title: 'Frequently Asked Questions',
+    faq1_q: 'What is the Holistic Wellness Alliance?',
+    faq1_a: 'HWA is a non-profit association dedicated to promoting holistic health through an integrative wellness approach.',
+    faq2_q: 'How do I register as a partner member?',
+    faq2_a: 'Join as an Alliance Partner tier to be listed on the PARTNERS page.',
+    faq3_q: 'What fields can participate as partners?',
+    faq3_a: 'All fields related to holistic wellness including nutrition, exercise, meditation, yoga, natural healing, counseling, coaching, and eco wellness.',
+    faq4_q: 'What activities does the association conduct?',
+    faq4_a: 'Regular seminars, workshops, online education, community events, and partner networking.',
+    footer_desc: 'A non-profit association for integrative holistic wellness. Realizing true wellbeing through balance of body, mind & soul.',
+    footer_nav: 'NAVIGATION', footer_phases: 'PHASES', footer_membership: 'MEMBERSHIP',
+    footer_copy: 'Non-profit Association',
+    modal_about: 'ABOUT', modal_highlights: 'HIGHLIGHTS', modal_services: 'SERVICES',
+    modal_close: 'Close', modal_visit: 'Visit Website →',
+    share_kakao: 'Share on KakaoTalk', share_copy: 'Copy Link', share_twitter: 'Share on X',
+    comment_placeholder: 'Write a comment...', comment_submit: 'Post',
+    like_btn: 'Like', comment_btn: 'Comment', share_btn: 'Share',
+  },
+  zh: {
+    logo_main: 'HOLISTIC WELLNESS ALLIANCE',
+    logo_sub: '全息健康联盟协会',
+    nav_home: '首页', nav_about: '关于', nav_partners: '合作伙伴',
+    nav_membership: '会员', nav_contact: '联系',
+    hero_badge: '全息健康联盟',
+    hero_title: '通过身心灵的<em>平衡</em><br>实现真正的健康',
+    hero_desc: '全息健康联盟协会是一个非营利组织，通过整合性健康方法促进个人和社区的全面健康。',
+    hero_cta1: '立即加入', hero_cta2: '了解更多',
+    stat1: '健康阶段', stat2: '合作伙伴', stat3: '国家', stat4: '社区',
+    mission_tag: '使命与愿景',
+    mission_title: '通过整合健康<br>树立生活新标准',
+    mission_p1: '全息健康联盟协会追求超越身体健康，整合心理、情感和精神健康的全人方法。',
+    mission_p2: '我们通过教育、研究和社区连接，将健康确立为可持续的生活方式。',
+    val1_title: '整合性', val1_desc: '身心灵的均衡整合',
+    val2_title: '社区', val2_desc: '共同成长的健康生态系统',
+    val3_title: '循证', val3_desc: '科学与传统的和谐融合',
+    val4_title: '可持续性', val4_desc: '人与地球共存的健康',
+    vision_title: '我们的愿景',
+    vision_desc: '到2030年建立亚洲最大的全息健康生态系统，为100万人传递全人健康的价值。',
+    why_tag: '为何选择全息',
+    why_title: '与传统医疗有何不同？',
+    why_desc: '全息健康追求生活各方面的平衡，超越症状治疗',
+    comp_aspect: '对比项目', comp_conventional: '传统医疗', comp_holistic: '全息健康',
+    comp_r1: '方法', comp_r1_conv: '以症状为中心的治疗', comp_r1_hol: '全人根本原因解决',
+    comp_r2: '范围', comp_r2_conv: '仅身体健康', comp_r2_hol: '身心灵环境整合',
+    comp_r3: '持续性', comp_r3_conv: '短期治疗', comp_r3_hol: '终身健康生活方式',
+    comp_r4: '个性化', comp_r4_conv: '标准化方案', comp_r4_hol: '个性化健康旅程',
+    comp_r5: '社区', comp_r5_conv: '个人单位治疗', comp_r5_hol: '基于社区的成长支持',
+    phases_tag: '6个健康阶段',
+    phases_title: '全息健康6阶段旅程',
+    phases_desc: '每个阶段有机连接，引导走向完整健康的旅程',
+    ph1_title: '身体健康', ph1_desc: '通过营养、运动、睡眠和自然疗愈构建身体基础。',
+    ph1_t1: '营养', ph1_t2: '运动', ph1_t3: '睡眠',
+    ph2_title: '心理健康', ph2_desc: '通过正念、冥想和认知健康提升心理清晰度。',
+    ph2_t1: '冥想', ph2_t2: '正念', ph2_t3: '认知健康',
+    ph3_title: '情感健康', ph3_desc: '通过情商发展、关系健康和创伤疗愈实现情感平衡。',
+    ph3_t1: '情商', ph3_t2: '关系健康', ph3_t3: '疗愈',
+    ph4_title: '精神健康', ph4_desc: '发现生命的目的和意义，内心平静与连接感。',
+    ph4_t1: '目的感', ph4_t2: '内心平静', ph4_t3: '连接感',
+    ph5_title: '社会健康', ph5_desc: '建立有意义的关系，参与社区，社会贡献。',
+    ph5_t1: '社区', ph5_t2: '关系', ph5_t3: '社会贡献',
+    ph6_title: '环境健康', ph6_desc: '与自然和谐，可持续生活方式，生态意识。',
+    ph6_t1: '自然疗愈', ph6_t2: '可持续', ph6_t3: '生态意识',
+    cta_tag: '加入我们',
+    cta_title: '一起开始健康旅程',
+    cta_desc: '200多家合作企业和5000名社区成员等待您的加入',
+    cta_btn1: '立即加入', cta_btn2: '探索合作伙伴',
+    about_tag: '关于HWA',
+    about_title: '全息健康联盟协会',
+    about_desc: '创造整合健康新标准的非营利组织',
+    journey_tag: '6阶段旅程', journey_title: '健康旅程的6个阶段',
+    journey_desc: '每个阶段有机连接，引导走向完整健康的旅程',
+    j1_title: '身体健康基础', j1_desc: '通过营养、运动、睡眠三角形构建身体健康基础。',
+    j2_title: '心理清晰', j2_desc: '通过正念和冥想实践获得心理清晰度并管理压力。',
+    j3_title: '情感平衡', j3_desc: '发展情商并疗愈过去的创伤。',
+    j4_title: '精神连接', j4_desc: '发现生命的目的和意义，寻找内心平静。',
+    j5_title: '社会连接', j5_desc: '建立有意义的关系并为社区做出贡献。',
+    j6_title: '环境和谐', j6_desc: '与自然和谐相处，践行可持续生活方式。',
+    about_cta_title: '准备好一起开始旅程了吗？',
+    about_cta_desc: '立即加入会员，开始6阶段健康旅程',
+    about_cta_btn: '立即加入',
+    partners_tag: '我们的合作伙伴',
+    partners_title: '携手同行的健康伙伴',
+    partners_desc: '介绍200多家共同构建全息健康生态系统的合作企业和专家',
+    pstat1: '合作伙伴', pstat2: '阶段', pstat3: '国家', pstat4: '类别',
+    ptab_partners: '会员企业', ptab_community: '社区动态',
+    phase_all: '全部',
+    phase1_tab: 'Phase 1 · 身体', phase2_tab: 'Phase 2 · 心理',
+    phase3_tab: 'Phase 3 · 情感', phase4_tab: 'Phase 4 · 精神',
+    phase5_tab: 'Phase 5 · 社会', phase6_tab: 'Phase 6 · 环境',
+    all_partners_title: '全部合作会员',
+    all_partners_desc: '一览所有阶段的合作会员企业',
+    ph1_header_title: '身体健康合作伙伴',
+    ph1_header_desc: '营养、运动、自然疗愈、睡眠健康领域的专业合作企业。',
+    ph2_header_title: '心理健康合作伙伴',
+    ph2_header_desc: '正念、冥想、认知健康、压力管理领域的专业合作企业。',
+    ph3_header_title: '情感健康合作伙伴',
+    ph3_header_desc: '情商发展、心理咨询、创伤疗愈、关系健康领域的专业合作企业。',
+    ph4_header_title: '精神健康合作伙伴',
+    ph4_header_desc: '冥想中心、瑜伽工作室、灵性教育、内在探索领域的专业合作企业。',
+    ph5_header_title: '社会健康合作伙伴',
+    ph5_header_desc: '社区平台、社会企业、关系教练、社区文化领域的专业合作企业。',
+    ph6_header_title: '环境健康合作伙伴',
+    ph6_header_desc: '自然疗愈、生态健康、可持续生活方式、生态教育领域的专业合作企业。',
+    upload_title: '分享活动照片和视频',
+    upload_desc: '与社区分享协会和会员的活动',
+    upload_btn: '选择文件',
+    feed_title: '社区动态',
+    filter_all: '全部', filter_image: '图片', filter_video: '视频',
+    mem_tag: '会员资格',
+    mem_title: '成为健康旅程的同伴',
+    mem_desc: '通过三种会员等级开始适合您的健康旅程',
+    tier1: '准会员', tier1_name: '准会员',
+    tier1_desc: '为开始健康旅程的人准备的入门会员资格',
+    tier_free: '/ 年',
+    tier1_f1: '社区动态访问', tier1_f2: '月度健康通讯',
+    tier1_f3: '基础教育内容', tier1_f4: '合作伙伴折扣', tier1_f5: '专家网络',
+    tier2: '从业者', tier2_name: '从业者',
+    tier2_desc: '为健康专业人士和积极实践者准备的会员资格',
+    tier_year: '/ 年',
+    tier2_f1: '准会员所有权益', tier2_f2: '合作伙伴15%折扣',
+    tier2_f3: '月度专家研讨会', tier2_f4: '认证项目参与', tier2_f5: '专家网络活动',
+    tier3: '联盟伙伴', tier3_name: '联盟伙伴',
+    tier3_desc: '为企业和机构合作伙伴准备的高级会员资格',
+    tier3_f1: '从业者所有权益', tier3_f2: '合作伙伴页面登记',
+    tier3_f3: '联合营销机会', tier3_f4: '优先合作项目', tier3_f5: '年度战略咨询',
+    tier_apply: '立即申请',
+    form_tag: '申请', form_title: '会员申请',
+    form_desc: '填写以下表格，我们的团队将在3个工作日内与您联系',
+    form_name: '姓名/机构名称', form_email: '电子邮件', form_phone: '联系电话',
+    form_tier: '期望等级', form_field: '专业领域/行业',
+    form_message: '加入动机及活动计划', form_submit: '提交申请',
+    contact_tag: '联系我们', contact_title: '一起交流',
+    contact_desc: '请随时发送关于协会的问题或合作提案',
+    contact_info_title: '联系信息',
+    contact_addr_label: '地址', contact_email_label: '电子邮件', contact_hours_label: '营业时间',
+    contact_hours: '周一至周五 09:00–18:00\n周六 10:00–15:00',
+    contact_subject: '咨询类型',
+    ctype1: '会员咨询', ctype2: '合作提案',
+    ctype3: '教育项目咨询', ctype4: '其他咨询',
+    contact_submit: '发送消息',
+    faq_tag: '常见问题', faq_title: '常见问题',
+    faq1_q: '全息健康联盟协会是什么组织？',
+    faq1_a: 'HWA是一个非营利组织，通过整合性健康方法促进个人和社区的全面健康。',
+    faq2_q: '如何注册为合作会员？',
+    faq2_a: '加入联盟伙伴等级即可在合作伙伴页面登记。',
+    faq3_q: '哪些领域的企业/专业人士可以参与？',
+    faq3_a: '营养、运动、冥想、瑜伽、自然疗愈、心理咨询、教练、生态健康等所有相关领域。',
+    faq4_q: '协会开展哪些活动？',
+    faq4_a: '定期研讨会、工作坊、在线教育、社区活动和合作伙伴网络等各种活动。',
+    footer_desc: '整合全息健康的非营利组织。通过身心灵的平衡实现真正的健康。',
+    footer_nav: '导航', footer_phases: '阶段', footer_membership: '会员',
+    footer_copy: '非营利组织',
+    modal_about: '关于', modal_highlights: '亮点', modal_services: '服务',
+    modal_close: '关闭', modal_visit: '访问网站 →',
+    share_kakao: 'KakaoTalk分享', share_copy: '复制链接', share_twitter: 'X分享',
+    comment_placeholder: '写评论...', comment_submit: '发布',
+    like_btn: '点赞', comment_btn: '评论', share_btn: '分享',
+  },
+  ja: {
+    logo_main: 'HOLISTIC WELLNESS ALLIANCE',
+    logo_sub: 'ホリスティックウェルネスアライアンス協会',
+    nav_home: 'ホーム', nav_about: '概要', nav_partners: 'パートナー',
+    nav_membership: '会員', nav_contact: 'お問い合わせ',
+    hero_badge: 'HOLISTIC WELLNESS ALLIANCE',
+    hero_title: '体・心・魂の<em>バランス</em>で<br>真のウェルビーイングを実現',
+    hero_desc: 'HWAは、統合的なウェルネスアプローチを通じて、個人とコミュニティの全人的健康を促進する非営利協会です。',
+    hero_cta1: '会員登録', hero_cta2: '詳しく見る',
+    stat1: 'ウェルネスフェーズ', stat2: 'パートナー', stat3: '国', stat4: 'コミュニティ',
+    mission_tag: 'ミッション＆ビジョン',
+    mission_title: '統合ウェルネスで<br>新しい生活基準を',
+    mission_p1: 'HWAは身体的健康を超えて、精神的・感情的・霊的ウェルビーイングを統合する全人的アプローチを追求します。',
+    mission_p2: '教育・研究・コミュニティを繋ぎ、ウェルネスを持続可能なライフスタイルとして定着させます。',
+    val1_title: '統合性', val1_desc: '体・心・魂のバランスある統合',
+    val2_title: 'コミュニティ', val2_desc: '共に成長するウェルネスエコシステム',
+    val3_title: 'エビデンス', val3_desc: '科学と伝統の調和ある融合',
+    val4_title: '持続可能性', val4_desc: '地球と人間が共存するウェルビーイング',
+    vision_title: '私たちのビジョン',
+    vision_desc: '2030年までにアジア最大のホリスティックウェルネスエコシステムを構築し、100万人の生活に全人的健康の価値を届けます。',
+    why_tag: 'なぜホリスティックか',
+    why_title: '従来のヘルスケアとの違いは？',
+    why_desc: 'ホリスティックウェルネスは症状治療を超えて、生活全体のバランスを追求します',
+    comp_aspect: '比較項目', comp_conventional: '従来のヘルスケア', comp_holistic: 'ホリスティックウェルネス',
+    comp_r1: 'アプローチ', comp_r1_conv: '症状中心の治療', comp_r1_hol: '全人的根本原因の解決',
+    comp_r2: '範囲', comp_r2_conv: '身体的健康のみ', comp_r2_hol: '体・心・魂・環境の統合',
+    comp_r3: '継続性', comp_r3_conv: '短期治療中心', comp_r3_hol: '生涯ウェルネスライフスタイル',
+    comp_r4: '個別化', comp_r4_conv: '標準化されたプロトコル', comp_r4_hol: '個人に合わせたウェルネスの旅',
+    comp_r5: 'コミュニティ', comp_r5_conv: '個人単位の治療', comp_r5_hol: 'コミュニティ基盤の成長支援',
+    phases_tag: '6つのウェルネスフェーズ',
+    phases_title: 'ホリスティックウェルネス6段階の旅',
+    phases_desc: '各段階は有機的に繋がり、完全なウェルビーイングへの旅を導きます',
+    ph1_title: '身体的ウェルネス', ph1_desc: '栄養・運動・睡眠・自然治癒を通じた身体基盤の構築。',
+    ph1_t1: '栄養', ph1_t2: '運動', ph1_t3: '睡眠',
+    ph2_title: '精神的ウェルネス', ph2_desc: 'マインドフルネス・瞑想・認知健康を通じた精神的明晰さの向上。',
+    ph2_t1: '瞑想', ph2_t2: 'マインドフルネス', ph2_t3: '認知健康',
+    ph3_title: '感情的ウェルネス', ph3_desc: '感情知性の開発・関係健康・トラウマ治癒を通じた感情的バランス。',
+    ph3_t1: '感情知性', ph3_t2: '関係健康', ph3_t3: '癒し',
+    ph4_title: '霊的ウェルネス', ph4_desc: '人生の目的と意味の発見、内なる平和と繋がり。',
+    ph4_t1: '目的意識', ph4_t2: '内なる平和', ph4_t3: '繋がり',
+    ph5_title: '社会的ウェルネス', ph5_desc: '意味ある関係構築・コミュニティ参加・社会貢献。',
+    ph5_t1: 'コミュニティ', ph5_t2: '関係', ph5_t3: '社会貢献',
+    ph6_title: '環境的ウェルネス', ph6_desc: '自然との調和・持続可能なライフスタイル・生態的意識。',
+    ph6_t1: '自然治癒', ph6_t2: '持続可能', ph6_t3: '生態意識',
+    cta_tag: 'JOIN US',
+    cta_title: 'ウェルネスの旅を一緒に始めましょう',
+    cta_desc: '200以上のパートナー企業と5,000名のコミュニティがあなたを待っています',
+    cta_btn1: '会員登録', cta_btn2: 'パートナーを見る',
+    about_tag: 'HWAについて',
+    about_title: 'ホリスティックウェルネスアライアンス協会',
+    about_desc: '統合ウェルネスの新しい基準を作る非営利協会',
+    journey_tag: '6段階の旅', journey_title: 'ウェルネスの旅の6段階',
+    journey_desc: '各段階は有機的に繋がり、完全なウェルビーイングへの旅を導きます',
+    j1_title: '身体的ウェルネスの基盤', j1_desc: '栄養・運動・睡眠の三角形で身体的健康の基盤を構築します。',
+    j2_title: '精神的明晰さ', j2_desc: 'マインドフルネスと瞑想の実践で精神的明晰さを得てストレスを管理します。',
+    j3_title: '感情的バランス', j3_desc: '感情知性を開発し、過去のトラウマを癒します。',
+    j4_title: '霊的繋がり', j4_desc: '人生の目的と意味を発見し、内なる平和を見つけます。',
+    j5_title: '社会的繋がり', j5_desc: '意味ある関係を構築し、コミュニティに貢献します。',
+    j6_title: '環境的調和', j6_desc: '自然と調和して持続可能な生活を実践します。',
+    about_cta_title: '旅を一緒に始めませんか？',
+    about_cta_desc: '今すぐ会員に登録して6段階のウェルネスの旅を始めましょう',
+    about_cta_btn: '会員登録',
+    partners_tag: 'パートナー',
+    partners_title: '共に歩むウェルネスパートナー',
+    partners_desc: 'ホリスティックウェルネスエコシステムを共に構築する200以上のパートナー企業と専門家を紹介します',
+    pstat1: 'パートナー', pstat2: 'フェーズ', pstat3: '国', pstat4: 'カテゴリー',
+    ptab_partners: '会員企業', ptab_community: 'コミュニティ',
+    phase_all: '全て',
+    phase1_tab: 'Phase 1 · 身体', phase2_tab: 'Phase 2 · 精神',
+    phase3_tab: 'Phase 3 · 感情', phase4_tab: 'Phase 4 · 霊性',
+    phase5_tab: 'Phase 5 · 社会', phase6_tab: 'Phase 6 · 環境',
+    all_partners_title: '全パートナー会員',
+    all_partners_desc: '全フェーズのパートナー会員を一覧で確認',
+    ph1_header_title: '身体的ウェルネスパートナー',
+    ph1_header_desc: '栄養・運動・自然治癒・睡眠健康分野の専門パートナー企業です。',
+    ph2_header_title: '精神的ウェルネスパートナー',
+    ph2_header_desc: 'マインドフルネス・瞑想・認知健康・ストレス管理分野の専門パートナー企業です。',
+    ph3_header_title: '感情的ウェルネスパートナー',
+    ph3_header_desc: '感情知性・心理カウンセリング・トラウマ治癒・関係健康分野の専門パートナー企業です。',
+    ph4_header_title: '霊的ウェルネスパートナー',
+    ph4_header_desc: '瞑想センター・ヨガスタジオ・霊性教育・内面探求分野の専門パートナー企業です。',
+    ph5_header_title: '社会的ウェルネスパートナー',
+    ph5_header_desc: 'コミュニティプラットフォーム・社会的企業・関係コーチング・コミュニティ文化分野の専門パートナー企業です。',
+    ph6_header_title: '環境的ウェルネスパートナー',
+    ph6_header_desc: '自然治癒・エコウェルネス・持続可能なライフスタイル・生態教育分野の専門パートナー企業です。',
+    upload_title: '活動写真＆動画を共有',
+    upload_desc: '協会と会員の活動をコミュニティと共有しましょう',
+    upload_btn: 'ファイルを選択',
+    feed_title: 'コミュニティフィード',
+    filter_all: '全て', filter_image: '画像', filter_video: '動画',
+    mem_tag: '会員資格',
+    mem_title: 'ウェルネスの旅の仲間になってください',
+    mem_desc: '3つの会員ランクであなたに合ったウェルネスの旅を始めましょう',
+    tier1: 'アソシエイト', tier1_name: 'アソシエイト',
+    tier1_desc: 'ウェルネスの旅を始める方のための入門メンバーシップ',
+    tier_free: '/ 年',
+    tier1_f1: 'コミュニティフィードアクセス', tier1_f2: '月次ウェルネスニュースレター',
+    tier1_f3: '基本教育コンテンツ', tier1_f4: 'パートナー割引', tier1_f5: '専門家ネットワーキング',
+    tier2: 'プラクティショナー', tier2_name: 'プラクティショナー',
+    tier2_desc: 'ウェルネス専門家と積極的な実践者のためのメンバーシップ',
+    tier_year: '/ 年',
+    tier2_f1: 'アソシエイト全特典', tier2_f2: 'パートナー15%割引',
+    tier2_f3: '月次専門家セミナー', tier2_f4: '認定プログラム参加', tier2_f5: '専門家ネットワーキングイベント',
+    tier3: 'アライアンスパートナー', tier3_name: 'アライアンスパートナー',
+    tier3_desc: '企業・機関パートナーのためのプレミアムメンバーシップ',
+    tier3_f1: 'プラクティショナー全特典', tier3_f2: 'パートナーページ掲載',
+    tier3_f3: '共同マーケティング機会', tier3_f4: '優先協力プロジェクト', tier3_f5: '年次戦略コンサルティング',
+    tier_apply: '申し込む',
+    form_tag: '申請', form_title: '会員申請',
+    form_desc: '以下のフォームを記入いただくと、担当者が3営業日以内にご連絡します',
+    form_name: '氏名/機関名', form_email: 'メールアドレス', form_phone: '電話番号',
+    form_tier: '希望ランク', form_field: '専門分野/業種',
+    form_message: '入会動機と活動計画', form_submit: '申請書を提出',
+    contact_tag: 'お問い合わせ', contact_title: '一緒にお話ししましょう',
+    contact_desc: '協会についてのご質問や協力提案をお気軽にお送りください',
+    contact_info_title: '連絡先情報',
+    contact_addr_label: '住所', contact_email_label: 'メール', contact_hours_label: '営業時間',
+    contact_hours: '月〜金 09:00〜18:00\n土 10:00〜15:00',
+    contact_subject: 'お問い合わせ種別',
+    ctype1: '会員入会のお問い合わせ', ctype2: 'パートナーシップ提案',
+    ctype3: '教育プログラムのお問い合わせ', ctype4: 'その他',
+    contact_submit: 'メッセージを送る',
+    faq_tag: 'よくある質問', faq_title: 'よくある質問',
+    faq1_q: 'ホリスティックウェルネスアライアンス協会とはどんな団体ですか？',
+    faq1_a: 'HWAは統合的なウェルネスアプローチを通じて個人とコミュニティの全人的健康を促進する非営利協会です。',
+    faq2_q: 'パートナー会員として登録するにはどうすればよいですか？',
+    faq2_a: 'アライアンスパートナーランクで入会するとパートナーページに掲載されます。',
+    faq3_q: 'どの分野の企業/専門家がパートナーとして参加できますか？',
+    faq3_a: '栄養・運動・瞑想・ヨガ・自然治癒・心理カウンセリング・コーチング・エコウェルネスなど全関連分野。',
+    faq4_q: '協会の活動はどのように行われますか？',
+    faq4_a: '定期セミナー・ワークショップ・オンライン教育・コミュニティイベント・パートナーネットワーキングなど。',
+    footer_desc: '統合ホリスティックウェルネスのための非営利協会。体・心・魂のバランスを通じて真のウェルビーイングを実現します。',
+    footer_nav: 'ナビゲーション', footer_phases: 'フェーズ', footer_membership: '会員',
+    footer_copy: '非営利法人',
+    modal_about: '概要', modal_highlights: 'ハイライト', modal_services: 'サービス',
+    modal_close: '閉じる', modal_visit: 'ウェブサイトを訪問 →',
+    share_kakao: 'KakaoTalkで共有', share_copy: 'リンクをコピー', share_twitter: 'Xで共有',
+    comment_placeholder: 'コメントを入力...', comment_submit: '投稿',
+    like_btn: 'いいね', comment_btn: 'コメント', share_btn: '共有',
+  },
+  ar: {
+    logo_main: 'HOLISTIC WELLNESS ALLIANCE',
+    logo_sub: 'جمعية تحالف العافية الشاملة',
+    nav_home: 'الرئيسية', nav_about: 'عن الجمعية', nav_partners: 'الشركاء',
+    nav_membership: 'العضوية', nav_contact: 'اتصل بنا',
+    hero_badge: 'تحالف العافية الشاملة',
+    hero_title: 'تحقيق العافية الحقيقية من خلال <em>توازن</em> الجسد والعقل والروح',
+    hero_desc: 'HWA هي جمعية غير ربحية مكرسة لتعزيز الصحة الشاملة للأفراد والمجتمعات من خلال نهج العافية المتكامل.',
+    hero_cta1: 'انضم الآن', hero_cta2: 'اعرف المزيد',
+    stat1: 'مراحل العافية', stat2: 'شركاء', stat3: 'دول', stat4: 'مجتمع',
+    mission_tag: 'الرسالة والرؤية',
+    mission_title: 'معيار حياة جديد<br>من خلال العافية المتكاملة',
+    mission_p1: 'تسعى HWA إلى نهج شامل يدمج الصحة النفسية والعاطفية والروحية بما يتجاوز الصحة الجسدية.',
+    mission_p2: 'نربط التعليم والبحث والمجتمع لترسيخ العافية كأسلوب حياة مستدام.',
+    val1_title: 'التكامل', val1_desc: 'دمج متوازن للجسد والعقل والروح',
+    val2_title: 'المجتمع', val2_desc: 'نظام بيئي للعافية ينمو معاً',
+    val3_title: 'قائم على الأدلة', val3_desc: 'دمج متناغم للعلم والتقاليد',
+    val4_title: 'الاستدامة', val4_desc: 'عافية تتعايش مع الأرض',
+    vision_title: 'رؤيتنا',
+    vision_desc: 'بناء أكبر نظام بيئي للعافية الشاملة في آسيا بحلول 2030، وتقديم قيمة الصحة الشاملة لمليون شخص.',
+    why_tag: 'لماذا الشاملة',
+    why_title: 'كيف تختلف عن الرعاية الصحية التقليدية؟',
+    why_desc: 'تسعى العافية الشاملة إلى التوازن في جميع جوانب الحياة، بما يتجاوز علاج الأعراض',
+    comp_aspect: 'الجانب', comp_conventional: 'الرعاية التقليدية', comp_holistic: 'العافية الشاملة',
+    comp_r1: 'النهج', comp_r1_conv: 'علاج يركز على الأعراض', comp_r1_hol: 'حل السبب الجذري الشامل',
+    comp_r2: 'النطاق', comp_r2_conv: 'الصحة الجسدية فقط', comp_r2_hol: 'الجسد والعقل والروح والبيئة',
+    comp_r3: 'الاستمرارية', comp_r3_conv: 'علاج قصير المدى', comp_r3_hol: 'أسلوب حياة عافية مدى الحياة',
+    comp_r4: 'التخصيص', comp_r4_conv: 'بروتوكولات موحدة', comp_r4_hol: 'رحلة عافية مخصصة',
+    comp_r5: 'المجتمع', comp_r5_conv: 'علاج فردي', comp_r5_hol: 'دعم النمو القائم على المجتمع',
+    phases_tag: '6 مراحل للعافية',
+    phases_title: 'رحلة العافية الشاملة بـ 6 مراحل',
+    phases_desc: 'كل مرحلة مترابطة عضوياً لتوجيه الرحلة نحو العافية الكاملة',
+    ph1_title: 'العافية الجسدية', ph1_desc: 'بناء أساس جسدي من خلال التغذية والتمرين والنوم والشفاء الطبيعي.',
+    ph1_t1: 'التغذية', ph1_t2: 'التمرين', ph1_t3: 'النوم',
+    ph2_title: 'العافية العقلية', ph2_desc: 'تعزيز الوضوح العقلي من خلال اليقظة الذهنية والتأمل والصحة المعرفية.',
+    ph2_t1: 'التأمل', ph2_t2: 'اليقظة الذهنية', ph2_t3: 'الصحة المعرفية',
+    ph3_title: 'العافية العاطفية', ph3_desc: 'التوازن العاطفي من خلال تطوير الذكاء العاطفي وصحة العلاقات وشفاء الصدمات.',
+    ph3_t1: 'الذكاء العاطفي', ph3_t2: 'صحة العلاقات', ph3_t3: 'الشفاء',
+    ph4_title: 'العافية الروحية', ph4_desc: 'اكتشاف الغرض والمعنى في الحياة، السلام الداخلي والتواصل.',
+    ph4_t1: 'الهدف', ph4_t2: 'السلام الداخلي', ph4_t3: 'التواصل',
+    ph5_title: 'العافية الاجتماعية', ph5_desc: 'بناء علاقات ذات معنى، المشاركة المجتمعية، المساهمة الاجتماعية.',
+    ph5_t1: 'المجتمع', ph5_t2: 'العلاقات', ph5_t3: 'المساهمة',
+    ph6_title: 'العافية البيئية', ph6_desc: 'الانسجام مع الطبيعة، أسلوب حياة مستدام، الوعي البيئي.',
+    ph6_t1: 'الشفاء الطبيعي', ph6_t2: 'مستدام', ph6_t3: 'الوعي البيئي',
+    cta_tag: 'انضم إلينا',
+    cta_title: 'ابدأ رحلة العافية معاً',
+    cta_desc: 'أكثر من 200 شركة شريكة و5000 عضو في المجتمع ينتظرونك',
+    cta_btn1: 'انضم الآن', cta_btn2: 'استكشف الشركاء',
+    about_tag: 'عن HWA',
+    about_title: 'جمعية تحالف العافية الشاملة',
+    about_desc: 'جمعية غير ربحية تصنع معايير جديدة في العافية المتكاملة',
+    journey_tag: 'رحلة 6 مراحل', journey_title: '6 مراحل من رحلة العافية',
+    journey_desc: 'كل مرحلة مترابطة عضوياً لتوجيه الرحلة نحو العافية الكاملة',
+    j1_title: 'أساس العافية الجسدية', j1_desc: 'بناء أساس الصحة الجسدية من خلال مثلث التغذية والتمرين والنوم.',
+    j2_title: 'الوضوح العقلي', j2_desc: 'اكتساب الوضوح العقلي وإدارة التوتر من خلال ممارسة اليقظة الذهنية والتأمل.',
+    j3_title: 'التوازن العاطفي', j3_desc: 'تطوير الذكاء العاطفي وشفاء صدمات الماضي.',
+    j4_title: 'التواصل الروحي', j4_desc: 'اكتشاف الغرض والمعنى في الحياة وإيجاد السلام الداخلي.',
+    j5_title: 'التواصل الاجتماعي', j5_desc: 'بناء علاقات ذات معنى والمساهمة في المجتمع.',
+    j6_title: 'الانسجام البيئي', j6_desc: 'العيش في انسجام مع الطبيعة وممارسة أسلوب حياة مستدام.',
+    about_cta_title: 'هل أنت مستعد لبدء الرحلة معاً؟',
+    about_cta_desc: 'انضم كعضو الآن وابدأ رحلة العافية ذات المراحل الست',
+    about_cta_btn: 'انضم الآن',
+    partners_tag: 'شركاؤنا',
+    partners_title: 'شركاء العافية المرافقون',
+    partners_desc: 'تعريف بأكثر من 200 شركة شريكة وخبراء يبنون نظام العافية الشاملة معاً',
+    pstat1: 'شركاء', pstat2: 'مراحل', pstat3: 'دول', pstat4: 'فئات',
+    ptab_partners: 'الشركات الأعضاء', ptab_community: 'تغذية المجتمع',
+    phase_all: 'الكل',
+    phase1_tab: 'المرحلة 1 · الجسدية', phase2_tab: 'المرحلة 2 · العقلية',
+    phase3_tab: 'المرحلة 3 · العاطفية', phase4_tab: 'المرحلة 4 · الروحية',
+    phase5_tab: 'المرحلة 5 · الاجتماعية', phase6_tab: 'المرحلة 6 · البيئية',
+    all_partners_title: 'جميع الشركاء الأعضاء',
+    all_partners_desc: 'عرض جميع الشركاء الأعضاء في جميع المراحل دفعة واحدة',
+    ph1_header_title: 'شركاء العافية الجسدية',
+    ph1_header_desc: 'شركات متخصصة في التغذية والتمرين والشفاء الطبيعي وصحة النوم.',
+    ph2_header_title: 'شركاء العافية العقلية',
+    ph2_header_desc: 'شركات متخصصة في اليقظة الذهنية والتأمل والصحة المعرفية وإدارة التوتر.',
+    ph3_header_title: 'شركاء العافية العاطفية',
+    ph3_header_desc: 'شركات متخصصة في الذكاء العاطفي والإرشاد النفسي وشفاء الصدمات وصحة العلاقات.',
+    ph4_header_title: 'شركاء العافية الروحية',
+    ph4_header_desc: 'شركات متخصصة في مراكز التأمل واستوديوهات اليوغا والتعليم الروحي والاستكشاف الداخلي.',
+    ph5_header_title: 'شركاء العافية الاجتماعية',
+    ph5_header_desc: 'شركات متخصصة في منصات المجتمع والمشاريع الاجتماعية وتدريب العلاقات والثقافة المجتمعية.',
+    ph6_header_title: 'شركاء العافية البيئية',
+    ph6_header_desc: 'شركات متخصصة في الشفاء الطبيعي والعافية البيئية وأسلوب الحياة المستدام والتعليم البيئي.',
+    upload_title: 'شارك صور وفيديوهات النشاطات',
+    upload_desc: 'شارك نشاطات الجمعية والأعضاء مع المجتمع',
+    upload_btn: 'اختر الملفات',
+    feed_title: 'تغذية المجتمع',
+    filter_all: 'الكل', filter_image: 'صور', filter_video: 'فيديو',
+    mem_tag: 'العضوية',
+    mem_title: 'كن رفيقاً في رحلة العافية',
+    mem_desc: 'ابدأ رحلة العافية المناسبة لك بثلاثة مستويات عضوية',
+    tier1: 'عضو مشارك', tier1_name: 'عضو مشارك',
+    tier1_desc: 'عضوية تمهيدية لمن يبدأ رحلة العافية',
+    tier_free: '/ سنة',
+    tier1_f1: 'الوصول إلى تغذية المجتمع', tier1_f2: 'نشرة العافية الشهرية',
+    tier1_f3: 'محتوى تعليمي أساسي', tier1_f4: 'خصومات الشركاء', tier1_f5: 'شبكة الخبراء',
+    tier2: 'ممارس', tier2_name: 'ممارس',
+    tier2_desc: 'عضوية للمتخصصين في العافية والممارسين النشطين',
+    tier_year: '/ سنة',
+    tier2_f1: 'جميع مزايا العضو المشارك', tier2_f2: 'خصم 15% من الشركاء',
+    tier2_f3: 'ندوات خبراء شهرية', tier2_f4: 'المشاركة في برامج الشهادات', tier2_f5: 'فعاليات شبكة الخبراء',
+    tier3: 'شريك التحالف', tier3_name: 'شريك التحالف',
+    tier3_desc: 'عضوية مميزة للشركاء من الشركات والمؤسسات',
+    tier3_f1: 'جميع مزايا الممارس', tier3_f2: 'إدراج في صفحة الشركاء',
+    tier3_f3: 'فرص تسويق مشترك', tier3_f4: 'مشاريع تعاون ذات أولوية', tier3_f5: 'استشارة استراتيجية سنوية',
+    tier_apply: 'تقدم الآن',
+    form_tag: 'الطلب', form_title: 'طلب العضوية',
+    form_desc: 'أكمل النموذج أدناه وسيتصل بك فريقنا خلال 3 أيام عمل',
+    form_name: 'الاسم / اسم المنظمة', form_email: 'البريد الإلكتروني', form_phone: 'الهاتف',
+    form_tier: 'المستوى المطلوب', form_field: 'المجال / الصناعة',
+    form_message: 'الدافع وخطة النشاط', form_submit: 'إرسال الطلب',
+    contact_tag: 'اتصل بنا', contact_title: 'لنتحدث معاً',
+    contact_desc: 'لا تتردد في إرسال أسئلتك أو مقترحات الشراكة',
+    contact_info_title: 'معلومات الاتصال',
+    contact_addr_label: 'العنوان', contact_email_label: 'البريد الإلكتروني', contact_hours_label: 'ساعات العمل',
+    contact_hours: 'الاثنين–الجمعة 09:00–18:00\nالسبت 10:00–15:00',
+    contact_subject: 'نوع الاستفسار',
+    ctype1: 'استفسار العضوية', ctype2: 'اقتراح شراكة',
+    ctype3: 'استفسار برنامج تعليمي', ctype4: 'أخرى',
+    contact_submit: 'إرسال الرسالة',
+    faq_tag: 'الأسئلة الشائعة', faq_title: 'الأسئلة الشائعة',
+    faq1_q: 'ما هي جمعية تحالف العافية الشاملة؟',
+    faq1_a: 'HWA هي جمعية غير ربحية مكرسة لتعزيز الصحة الشاملة من خلال نهج العافية المتكامل.',
+    faq2_q: 'كيف أسجل كشريك عضو؟',
+    faq2_a: 'انضم كشريك تحالف ليتم إدراجك في صفحة الشركاء.',
+    faq3_q: 'ما المجالات التي يمكن المشاركة فيها كشركاء؟',
+    faq3_a: 'جميع المجالات المتعلقة بالعافية الشاملة بما في ذلك التغذية والتمرين والتأمل واليوغا والشفاء الطبيعي والإرشاد.',
+    faq4_q: 'ما الأنشطة التي تقوم بها الجمعية؟',
+    faq4_a: 'ندوات منتظمة وورش عمل وتعليم عبر الإنترنت وفعاليات مجتمعية وشبكة الشركاء.',
+    footer_desc: 'جمعية غير ربحية للعافية الشاملة المتكاملة. تحقيق العافية الحقيقية من خلال توازن الجسد والعقل والروح.',
+    footer_nav: 'التنقل', footer_phases: 'المراحل', footer_membership: 'العضوية',
+    footer_copy: 'جمعية غير ربحية',
+    modal_about: 'عن', modal_highlights: 'أبرز النقاط', modal_services: 'الخدمات',
+    modal_close: 'إغلاق', modal_visit: 'زيارة الموقع →',
+    share_kakao: 'مشاركة على KakaoTalk', share_copy: 'نسخ الرابط', share_twitter: 'مشاركة على X',
+    comment_placeholder: 'اكتب تعليقاً...', comment_submit: 'نشر',
+    like_btn: 'إعجاب', comment_btn: 'تعليق', share_btn: 'مشاركة',
+  }
+};
+
+// ===== PARTNER DATA =====
+const partners = [
+  // Phase 1 - Physical
+  { id: 1, phase: 1, emoji: '🥗', name: '그린바이트', category: '영양 & 식이요법', desc: '자연 유래 성분으로 만든 기능성 식품과 영양 상담 서비스를 제공하는 웰니스 푸드 전문 기업입니다. 개인 맞춤형 식단 설계로 최적의 영양 균형을 실현합니다.', tags: ['영양', '기능식품', '식단관리'], url: 'https://example.com', h1: '500+', l1: '고객', h2: '15년', l2: '경력', h3: '98%', l3: '만족도', services: '맞춤 영양 상담, 기능성 식품 개발, 식단 코칭 프로그램' },
+  { id: 2, phase: 1, emoji: '🏃', name: '바디밸런스', category: '운동 & 피트니스', desc: '과학적 운동 처방과 개인 맞춤형 트레이닝으로 신체 최적화를 실현하는 피트니스 전문 기업입니다. 재활부터 고성능 트레이닝까지 전 영역을 커버합니다.', tags: ['운동처방', '퍼스널트레이닝', '재활'], url: 'https://example.com', h1: '1,200+', l1: '회원', h2: '20+', l2: '트레이너', h3: '95%', l3: '목표달성', services: '퍼스널 트레이닝, 그룹 클래스, 재활 운동 프로그램' },
+  { id: 3, phase: 1, emoji: '🌿', name: '네이처힐', category: '자연치유 & 한방', desc: '전통 한의학과 현대 자연치유를 융합한 통합 치유 센터입니다. 침술, 한방 약재, 자연 요법을 통해 몸의 자연 치유력을 극대화합니다.', tags: ['한방', '자연치유', '침술'], url: 'https://example.com', h1: '30년', l1: '전통', h2: '5,000+', l2: '치료 사례', h3: '92%', l3: '개선율', services: '한방 침술, 자연 약재 처방, 자연치유 프로그램' },
+  { id: 4, phase: 1, emoji: '😴', name: '슬립웰', category: '수면 건강', desc: '수면 과학 기반의 수면 최적화 솔루션을 제공합니다. 수면 분석부터 환경 개선, 수면 코칭까지 깊은 수면을 위한 모든 것을 제공합니다.', tags: ['수면분석', '수면코칭', '수면환경'], url: 'https://example.com', h1: '10,000+', l1: '수면 분석', h2: '85%', l2: '수면 개선', h3: '4.9', l3: '앱 평점', services: '수면 분석 서비스, 수면 환경 컨설팅, 수면 코칭' },
+
+  // Phase 2 - Mental
+  { id: 5, phase: 2, emoji: '🧘', name: '마인드풀스페이스', category: '명상 & 마음챙김', desc: '과학적으로 검증된 명상 프로그램과 마음챙김 교육을 제공하는 정신 건강 전문 기업입니다. 스트레스 감소부터 집중력 향상까지 다양한 프로그램을 운영합니다.', tags: ['명상', '마음챙김', 'MBSR'], url: 'https://example.com', h1: '50,000+', l1: '명상 세션', h2: '200+', l2: '강사', h3: '87%', l3: '스트레스 감소', services: 'MBSR 프로그램, 기업 명상 교육, 1:1 마음챙김 코칭' },
+  { id: 6, phase: 2, emoji: '🧠', name: '브레인핏', category: '인지 건강 & 뇌과학', desc: '뇌과학 기반의 인지 건강 프로그램을 통해 기억력, 집중력, 창의성을 향상시키는 전문 기업입니다. 신경가소성 원리를 활용한 맞춤형 뇌 훈련을 제공합니다.', tags: ['뇌과학', '인지훈련', '집중력'], url: 'https://example.com', h1: '100+', l1: '연구 기반', h2: '30,000+', l2: '사용자', h3: '40%', l3: '인지 향상', services: '인지 기능 평가, 뇌 훈련 프로그램, 기업 교육' },
+  { id: 7, phase: 2, emoji: '🎯', name: '포커스랩', category: '스트레스 관리', desc: '현대인의 스트레스와 번아웃을 과학적으로 관리하는 전문 기관입니다. 바이오피드백, 신경언어프로그래밍(NLP) 등 첨단 기법을 활용합니다.', tags: ['스트레스관리', '번아웃', 'NLP'], url: 'https://example.com', h1: '8년', l1: '운영', h2: '15,000+', l2: '상담 건수', h3: '93%', l3: '만족도', services: '스트레스 진단, 바이오피드백 치료, NLP 코칭' },
+
+  // Phase 3 - Emotional
+  { id: 8, phase: 3, emoji: '💚', name: '하트웰니스', category: '감정 코칭 & 상담', desc: '감정 지능 개발과 심리 상담을 통해 감정적 건강을 증진하는 전문 기관입니다. 개인 상담부터 집단 치료까지 다양한 접근법을 제공합니다.', tags: ['감정코칭', '심리상담', 'EQ개발'], url: 'https://example.com', h1: '20년', l1: '상담 경력', h2: '50+', l2: '전문 상담사', h3: '96%', l3: '재방문율', services: '개인 심리 상담, 감정 코칭, 집단 치료 프로그램' },
+  { id: 9, phase: 3, emoji: '🌸', name: '릴레이션십스튜디오', category: '관계 & 커플 상담', desc: '건강한 관계 패턴을 형성하고 커플 및 가족 관계를 개선하는 전문 상담 기관입니다. 관계 심리학 기반의 과학적 접근법을 사용합니다.', tags: ['커플상담', '가족치료', '관계개선'], url: 'https://example.com', h1: '3,000+', l1: '커플 상담', h2: '98%', l2: '만족도', h3: '85%', l3: '관계 개선', services: '커플 상담, 가족 치료, 관계 워크숍' },
+  { id: 10, phase: 3, emoji: '🦋', name: '트라우마힐링센터', category: '트라우마 치유', desc: 'EMDR, 소매틱 테라피 등 최신 트라우마 치유 기법을 활용하여 과거의 상처를 치유하고 회복력을 키우는 전문 센터입니다.', tags: ['트라우마', 'EMDR', '소매틱'], url: 'https://example.com', h1: '12년', l1: '전문 운영', h2: '8,000+', l2: '치유 사례', h3: '94%', l3: '회복률', services: 'EMDR 치료, 소매틱 테라피, 트라우마 회복 프로그램' },
+
+  // Phase 4 - Spiritual
+  { id: 11, phase: 4, emoji: '🕯️', name: '이너피스센터', category: '명상 & 영성 교육', desc: '내면의 평화와 영적 성장을 위한 깊은 명상과 영성 교육을 제공하는 센터입니다. 다양한 명상 전통을 통합하여 현대인에게 맞는 영적 실천을 안내합니다.', tags: ['영성교육', '깊은명상', '내면탐구'], url: 'https://example.com', h1: '25년', l1: '명상 전통', h2: '10,000+', l2: '수련생', h3: '100+', l3: '프로그램', services: '집중 명상 수련, 영성 교육 과정, 리트릿 프로그램' },
+  { id: 12, phase: 4, emoji: '🧘‍♀️', name: '요가얼라이언스코리아', category: '요가 & 바디워크', desc: '전통 요가의 지혜와 현대 과학을 융합한 통합 요가 교육 기관입니다. 요가 지도자 양성부터 치료 요가까지 전문적인 교육을 제공합니다.', tags: ['요가', '아사나', '프라나야마'], url: 'https://example.com', h1: '500+', l1: '요가 강사', h2: '50,000+', l2: '수련생', h3: '15년', l3: '교육 역사', services: '요가 지도자 양성, 치료 요가, 명상 요가 클래스' },
+  { id: 13, phase: 4, emoji: '✨', name: '라이프퍼포스연구소', category: '삶의 목적 & 코칭', desc: '삶의 목적과 의미를 발견하고 진정한 자아를 실현하는 코칭 전문 기관입니다. ICF 인증 코치들이 개인 맞춤형 라이프 코칭을 제공합니다.', tags: ['라이프코칭', '목적발견', 'ICF인증'], url: 'https://example.com', h1: 'ICF', l1: '공인 기관', h2: '2,000+', l2: '코칭 세션', h3: '99%', l3: '목표 달성', services: '라이프 코칭, 목적 발견 워크숍, 그룹 코칭 프로그램' },
+
+  // Phase 5 - Social
+  { id: 14, phase: 5, emoji: '🤝', name: '웰니스커뮤니티', category: '커뮤니티 플랫폼', desc: '웰니스를 중심으로 한 온오프라인 커뮤니티 플랫폼입니다. 같은 가치를 공유하는 사람들이 연결되고 함께 성장할 수 있는 공간을 제공합니다.', tags: ['커뮤니티', '소셜웰니스', '네트워킹'], url: 'https://example.com', h1: '100,000+', l1: '커뮤니티 멤버', h2: '500+', l2: '월간 이벤트', h3: '50+', l3: '도시', services: '온라인 커뮤니티 플랫폼, 오프라인 모임, 웰니스 이벤트' },
+  { id: 15, phase: 5, emoji: '🌱', name: '소셜임팩트웰니스', category: '사회적 기업', desc: '웰니스를 통한 사회 변화를 추구하는 소셜 임팩트 기업입니다. 소외 계층을 위한 웰니스 프로그램과 사회적 가치 창출 활동을 전개합니다.', tags: ['사회적기업', '임팩트', '포용적웰니스'], url: 'https://example.com', h1: '10,000+', l1: '수혜자', h2: '100+', l2: '파트너 기관', h3: '5개', l3: '사회 프로그램', services: '소외 계층 웰니스 지원, 기업 CSR 프로그램, 사회적 가치 컨설팅' },
+  { id: 16, phase: 5, emoji: '💬', name: '커넥트웰니스', category: '관계 코칭 & 소통', desc: '건강한 소통과 관계 형성을 위한 전문 코칭 서비스를 제공합니다. 개인, 팀, 조직의 소통 문화를 개선하여 사회적 웰니스를 실현합니다.', tags: ['소통코칭', '팀빌딩', '조직문화'], url: 'https://example.com', h1: '500+', l1: '기업 고객', h2: '98%', l2: '소통 개선', h3: '10년', l3: '전문 경력', services: '소통 코칭, 팀 빌딩 프로그램, 조직 문화 개선' },
+
+  // Phase 6 - Environmental
+  { id: 17, phase: 6, emoji: '🌲', name: '마이헤이븐', category: '자연 치유 & 리트릿', desc: '경기도 가평의 아름다운 자연 속에 위치한 홀리스틱 웰니스 리트릿 센터입니다. 자연과의 깊은 연결을 통해 몸과 마음의 완전한 회복을 경험합니다.', tags: ['자연리트릿', '산림치유', '에코웰니스'], url: 'https://example.com', h1: '5,000평', l1: '자연 부지', h2: '365일', l2: '운영', h3: '4.9', l3: '평점', services: '자연 치유 리트릿, 산림 치유 프로그램, 에코 웰니스 캠프' },
+  { id: 18, phase: 6, emoji: '♻️', name: '에코라이프스타일', category: '지속가능 생활', desc: '지속 가능한 생활 방식을 통해 개인과 지구의 건강을 동시에 실현하는 에코 웰니스 전문 기업입니다. 친환경 제품과 지속 가능한 라이프스타일 교육을 제공합니다.', tags: ['에코', '지속가능', '친환경'], url: 'https://example.com', h1: '탄소중립', l1: '인증 기업', h2: '500+', l2: '에코 제품', h3: '50,000+', l3: '교육 수료', services: '친환경 제품 개발, 지속 가능한 라이프스타일 교육, 에코 인증' },
+  { id: 19, phase: 6, emoji: '🌊', name: '블루마인드코리아', category: '물 & 자연 테라피', desc: '물과 자연 환경을 활용한 치유 프로그램을 제공하는 자연 테라피 전문 기관입니다. 블루마인드 과학을 기반으로 물과의 연결을 통한 심신 치유를 실현합니다.', tags: ['블루마인드', '수중치유', '자연테라피'], url: 'https://example.com', h1: '블루마인드', l1: '공인 기관', h2: '3,000+', l2: '치유 참가자', h3: '97%', l3: '효과 입증', services: '블루마인드 프로그램, 수중 치유 세션, 자연 테라피 리트릿' },
+];
+
+// Sample community feed posts
+const feedPosts = [
+  { id: 1, type: 'image', author: 'HWA 협회', avatar: 'H', date: '2025.03.10', content: '지난 주말 마이헤이븐 은천재에서 진행된 봄 웰니스 리트릿 현장입니다. 자연 속에서 몸과 마음을 깊이 치유하는 시간을 가졌습니다. 참가해주신 모든 분들께 감사드립니다! 🌿', tags: ['웰니스리트릿', '마이헤이븐', '자연치유'], likes: 48, comments: [{ author: '김웰니스', text: '정말 아름다운 공간이네요! 다음 리트릿도 참가하고 싶어요.' }, { author: '이힐링', text: '저도 참가했는데 정말 힐링이 됐어요. 감사합니다!' }], emoji: '🌿' },
+  { id: 2, type: 'video', author: '마인드풀스페이스', avatar: 'M', date: '2025.03.08', content: '오늘 진행된 기업 명상 교육 현장을 공유합니다. 50명의 임직원분들과 함께한 MBSR 프로그램, 모두 깊은 집중과 평화를 경험하셨습니다. 🧘', tags: ['기업명상', 'MBSR', '마음챙김'], likes: 32, comments: [{ author: '박명상', text: '우리 회사도 신청하고 싶어요!' }], emoji: '🧘' },
+  { id: 3, type: 'image', author: '요가얼라이언스코리아', avatar: 'Y', date: '2025.03.06', content: '봄을 맞이하여 야외 요가 클래스를 진행했습니다. 따뜻한 햇살 아래 자연과 함께하는 요가는 실내와는 또 다른 특별한 경험이었습니다. 🌸', tags: ['야외요가', '봄요가', '자연요가'], likes: 65, comments: [{ author: '최요가', text: '다음에는 저도 꼭 참가하고 싶어요!' }, { author: '정힐링', text: '사진만 봐도 힐링이 되네요.' }, { author: '한웰니스', text: '장소가 어디인가요?' }], emoji: '🌸' },
+  { id: 4, type: 'image', author: '그린바이트', avatar: 'G', date: '2025.03.04', content: '봄 제철 재료로 만든 웰니스 식단을 소개합니다. 냉이, 달래, 봄나물로 가득한 이 식단은 봄의 에너지를 몸 안에 담아드립니다. 🥗', tags: ['웰니스식단', '봄나물', '자연식'], likes: 41, comments: [{ author: '이영양', text: '레시피도 공유해주실 수 있나요?' }], emoji: '🥗' },
+];
+
+// ===== STATE =====
+let currentLang = localStorage.getItem('hwa-lang') || 'ko';
+let currentPage = 'home';
+let likedPosts = new Set();
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  setLang(currentLang, false);
+  renderPartners();
+  renderFeed();
+  initReveal();
+});
+
+// ===== NAVIGATION =====
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(n => {
+    if (n.getAttribute('onclick') && n.getAttribute('onclick').includes("'" + page + "'")) {
+      n.classList.add('active');
+    }
+  });
+  currentPage = page;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  initReveal();
+}
+
+function toggleMobileMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ===== LANGUAGE =====
+function setLang(lang, save = true) {
+  currentLang = lang;
+  if (save) localStorage.setItem('hwa-lang', lang);
+
+  // RTL
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+
+  // Update lang buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+
+  // Apply translations
+  const t = i18n[lang] || i18n.ko;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = t[key];
+      } else {
+        el.innerHTML = t[key];
+      }
+    }
+  });
+
+  // Re-render dynamic content
+  renderPartners();
+  renderFeed();
+}
+
+// ===== TABS =====
+function switchMainTab(tabId, btn) {
+  document.querySelectorAll('.main-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.main-tab-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + tabId).classList.add('active');
+}
+
+function switchPhase(phaseId, btn) {
+  document.querySelectorAll('.phase-sub-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.phase-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(phaseId).classList.add('active');
+}
+
+// ===== RENDER PARTNERS =====
+function renderPartners() {
+  const t = i18n[currentLang] || i18n.ko;
+
+  // Render each phase grid
+  for (let p = 1; p <= 6; p++) {
+    const grid = document.getElementById('phase' + p + '-grid');
+    if (grid) {
+      const phasePartners = partners.filter(pt => pt.phase === p);
+      grid.innerHTML = phasePartners.map(pt => createPartnerCard(pt, t)).join('');
+    }
+  }
+
+  // All partners grid
+  const allGrid = document.getElementById('all-partners-grid');
+  if (allGrid) {
+    allGrid.innerHTML = partners.map(pt => createPartnerCard(pt, t)).join('');
+  }
+}
+
+function createPartnerCard(pt, t) {
+  const phaseLabels = ['', 'Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5', 'Phase 6'];
+  return `
+    <div class="partner-card" onclick="openPartnerModal(${pt.id})">
+      <div class="partner-card-header">
+        <div class="partner-phase-badge">${phaseLabels[pt.phase]}</div>
+        <div class="partner-logo">${pt.emoji}</div>
+        <h3>${pt.name}</h3>
+        <div class="partner-category">${pt.category}</div>
+      </div>
+      <div class="partner-card-body">
+        <p>${pt.desc.substring(0, 80)}...</p>
+        <div class="partner-tags">
+          ${pt.tags.map(tag => `<span class="partner-tag">${tag}</span>`).join('')}
+        </div>
+        <div class="partner-cta">
+          <a href="${pt.url}" target="_blank" class="btn-visit" onclick="event.stopPropagation()">
+            🔗 ${t.modal_visit || '웹사이트 방문하기 →'}
+          </a>
+          <button class="btn-detail" onclick="event.stopPropagation(); openPartnerModal(${pt.id})">상세보기</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function openPartnerModal(id) {
+  const pt = partners.find(p => p.id === id);
+  if (!pt) return;
+  const t = i18n[currentLang] || i18n.ko;
+
+  document.getElementById('modalLogo').textContent = pt.emoji;
+  document.getElementById('modalName').textContent = pt.name;
+  document.getElementById('modalCategory').textContent = pt.category;
+  document.getElementById('modalDesc').textContent = pt.desc;
+  document.getElementById('modalServices').textContent = pt.services;
+  document.getElementById('modalHighlights').innerHTML = `
+    <div class="modal-highlight"><div class="num">${pt.h1}</div><div class="label">${pt.l1}</div></div>
+    <div class="modal-highlight"><div class="num">${pt.h2}</div><div class="label">${pt.l2}</div></div>
+    <div class="modal-highlight"><div class="num">${pt.h3}</div><div class="label">${pt.l3}</div></div>
+  `;
+  const visitBtn = document.getElementById('modalVisitBtn');
+  visitBtn.href = pt.url;
+  visitBtn.textContent = t.modal_visit || '웹사이트 방문하기 →';
+
+  document.getElementById('partnerModal').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('partnerModal')) {
+    document.getElementById('partnerModal').classList.remove('open');
+  }
+}
+
+// ===== RENDER FEED =====
+function renderFeed(filter = 'all') {
+  const t = i18n[currentLang] || i18n.ko;
+  const grid = document.getElementById('feedGrid');
+  if (!grid) return;
+
+  const filtered = filter === 'all' ? feedPosts : feedPosts.filter(p => p.type === filter);
+
+  grid.innerHTML = filtered.map(post => `
+    <div class="feed-card" data-type="${post.type}" data-id="${post.id}">
+      <div class="feed-media">
+        <span style="font-size:64px;">${post.emoji}</span>
+      </div>
+      <div class="feed-body">
+        <div class="feed-meta">
+          <div class="feed-avatar">${post.avatar}</div>
+          <div>
+            <div class="feed-author">${post.author}</div>
+          </div>
+          <div class="feed-date">${post.date}</div>
+        </div>
+        <p>${post.content}</p>
+        <div class="feed-tags">
+          ${post.tags.map(tag => `<span class="feed-tag">#${tag}</span>`).join('')}
+        </div>
+        <div class="feed-actions">
+          <button class="feed-action-btn ${likedPosts.has(post.id) ? 'liked' : ''}" onclick="toggleLike(${post.id}, this)">
+            <span class="icon">${likedPosts.has(post.id) ? '❤️' : '🤍'}</span>
+            <span class="like-count">${post.likes + (likedPosts.has(post.id) ? 1 : 0)}</span>
+          </button>
+          <button class="feed-action-btn" onclick="toggleComments(${post.id}, this)">
+            <span class="icon">💬</span>
+            <span>${post.comments.length}</span>
+          </button>
+          <div class="share-dropdown">
+            <button class="feed-action-btn" onclick="toggleShareMenu(${post.id}, this)">
+              <span class="icon">↗️</span>
+              <span>${t.share_btn || '공유'}</span>
+            </button>
+            <div class="share-menu" id="share-menu-${post.id}">
+              <button class="share-menu-item" onclick="sharePost('kakao', ${post.id})">💬 ${t.share_kakao || '카카오톡 공유'}</button>
+              <button class="share-menu-item" onclick="sharePost('copy', ${post.id})">🔗 ${t.share_copy || '링크 복사'}</button>
+              <button class="share-menu-item" onclick="sharePost('twitter', ${post.id})">🐦 ${t.share_twitter || 'X(트위터) 공유'}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comments-section" id="comments-${post.id}">
+        ${post.comments.map(c => `
+          <div class="comment-item">
+            <div class="comment-avatar">${c.author[0]}</div>
+            <div class="comment-bubble">
+              <div class="comment-author">${c.author}</div>
+              <p>${c.text}</p>
+            </div>
+          </div>
+        `).join('')}
+        <div class="comment-input-row">
+          <input type="text" class="comment-input" placeholder="${t.comment_placeholder || '댓글을 입력하세요...'}" id="comment-input-${post.id}" onkeydown="if(event.key==='Enter') submitComment(${post.id})" />
+          <button class="comment-submit" onclick="submitComment(${post.id})">${t.comment_submit || '등록'}</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterFeed(filter, btn) {
+  document.querySelectorAll('.feed-filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderFeed(filter);
+}
+
+function toggleLike(postId, btn) {
+  const post = feedPosts.find(p => p.id === postId);
+  if (!post) return;
+
+  if (likedPosts.has(postId)) {
+    likedPosts.delete(postId);
+    btn.classList.remove('liked');
+    btn.querySelector('.icon').textContent = '🤍';
+    btn.querySelector('.like-count').textContent = post.likes;
+  } else {
+    likedPosts.add(postId);
+    btn.classList.add('liked');
+    btn.querySelector('.icon').textContent = '❤️';
+    btn.querySelector('.like-count').textContent = post.likes + 1;
+  }
+}
+
+function toggleComments(postId, btn) {
+  const section = document.getElementById('comments-' + postId);
+  if (section) section.classList.toggle('open');
+}
+
+function toggleShareMenu(postId, btn) {
+  const menu = document.getElementById('share-menu-' + postId);
+  if (menu) {
+    document.querySelectorAll('.share-menu').forEach(m => {
+      if (m !== menu) m.classList.remove('open');
+    });
+    menu.classList.toggle('open');
+  }
+}
+
+function sharePost(type, postId) {
+  const url = window.location.href + '#post-' + postId;
+  const post = feedPosts.find(p => p.id === postId);
+  const text = post ? post.content.substring(0, 100) : 'HWA 커뮤니티';
+
+  if (type === 'copy') {
+    navigator.clipboard.writeText(url).then(() => showToast('링크가 복사되었습니다!'));
+  } else if (type === 'twitter') {
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank');
+  } else if (type === 'kakao') {
+    showToast('카카오톡 공유 기능은 앱 연동 후 사용 가능합니다.');
+  }
+
+  document.querySelectorAll('.share-menu').forEach(m => m.classList.remove('open'));
+}
+
+function submitComment(postId) {
+  const input = document.getElementById('comment-input-' + postId);
+  if (!input || !input.value.trim()) return;
+
+  const post = feedPosts.find(p => p.id === postId);
+  if (!post) return;
+
+  post.comments.push({ author: '방문자', text: input.value.trim() });
+  renderFeed();
+
+  // Re-open comments section
+  setTimeout(() => {
+    const section = document.getElementById('comments-' + postId);
+    if (section) section.classList.add('open');
+  }, 50);
+
+  showToast('댓글이 등록되었습니다!');
+}
+
+// ===== FILE UPLOAD =====
+function handleFileUpload(event) {
+  const files = Array.from(event.target.files);
+  if (!files.length) return;
+
+  files.forEach(file => {
+    const isVideo = file.type.startsWith('video/');
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const newPost = {
+        id: Date.now() + Math.random(),
+        type: isVideo ? 'video' : 'image',
+        author: '회원',
+        avatar: '👤',
+        date: new Date().toLocaleDateString('ko-KR').replace(/\. /g, '.').replace('.', ''),
+        content: file.name + ' - 새로운 활동을 공유합니다!',
+        tags: ['새활동', 'HWA'],
+        likes: 0,
+        comments: [],
+        emoji: isVideo ? '🎬' : '📸',
+        mediaUrl: e.target.result,
+        isNew: true
+      };
+      feedPosts.unshift(newPost);
+      renderFeed();
+      showToast('미디어가 업로드되었습니다!');
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+// ===== FORMS =====
+function submitForm(e) {
+  e.preventDefault();
+  showToast('신청서가 제출되었습니다! 3일 이내에 연락드리겠습니다.');
+  e.target.reset();
+}
+
+function submitContact(e) {
+  e.preventDefault();
+  showToast('메시지가 전송되었습니다! 빠른 시일 내에 답변드리겠습니다.');
+  e.target.reset();
+}
+
+// ===== FAQ =====
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const isOpen = el.classList.contains('open');
+
+  document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+
+  if (!isOpen) {
+    el.classList.add('open');
+    answer.classList.add('open');
+  }
+}
+
+// ===== TOAST =====
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// ===== SCROLL REVEAL =====
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.classList.remove('visible');
+    observer.observe(el);
+  });
+}
+
+// Close share menus on outside click
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.share-dropdown')) {
+    document.querySelectorAll('.share-menu').forEach(m => m.classList.remove('open'));
+  }
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () =>
+ {
+  const header = document.getElementById('header');
+  if (header) {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }
+});
+</script>
+</body>
+</html>
