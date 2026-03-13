@@ -331,11 +331,186 @@
       color: var(--moss-dark);
       border: 1.5px solid var(--moss);
     }
-
     .btn-moss-outline:hover {
       background: var(--moss);
       color: white;
     }
+    .btn-check {
+      background: linear-gradient(135deg, #4a7c6e 0%, #2d5a4a 100%);
+      color: white;
+      box-shadow: 0 4px 20px rgba(74, 124, 110, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-check::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -60%;
+      width: 40%; height: 200%;
+      background: rgba(255,255,255,0.15);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+    .btn-check:hover::before { left: 120%; }
+    .btn-check:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(74, 124, 110, 0.55);
+    }
+    /* Wellness Check Banner */
+    .wellness-check-section {
+      background: linear-gradient(135deg, #1e2e20 0%, #162618 50%, #0e1e12 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .wellness-check-section::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 450px; height: 450px;
+      background: radial-gradient(circle, rgba(184,150,46,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .wellness-check-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(107,124,92,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .wc-inner {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .wc-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .wc-features { justify-content: center; }
+    }
+    .wc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(184,150,46,0.18);
+      border: 1px solid rgba(184,150,46,0.35);
+      color: var(--gold-light);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .wc-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(24px, 3vw, 36px);
+      color: white;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+    .wc-title em { color: var(--gold-light); font-style: italic; }
+    .wc-desc {
+      color: rgba(255,255,255,0.65);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .wc-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .wc-feature-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 100px;
+      padding: 7px 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+    }
+    .wc-feature-pill span { font-size: 14px; }
+    .wc-visual {
+      display: flex;
+      justify-content: center;
+    }
+    .wc-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 36px 32px;
+      width: 100%;
+      max-width: 340px;
+      backdrop-filter: blur(10px);
+    }
+    .wc-card-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .wc-card-title {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .wc-card-sub {
+      color: rgba(255,255,255,0.45);
+      font-size: 12px;
+    }
+    .wc-score-ring {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: conic-gradient(var(--gold-light) 0deg 252deg, rgba(255,255,255,0.08) 252deg 360deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+    .wc-score-ring::before {
+      content: '';
+      position: absolute;
+      width: 82px; height: 82px;
+      border-radius: 50%;
+      background: #162618;
+    }
+    .wc-score-num {
+      position: relative; z-index: 1;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+    .wc-bars { display: flex; flex-direction: column; gap: 10px; }
+    .wc-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+    }
+    .wc-bar-label { width: 52px; flex-shrink: 0; }
+    .wc-bar-track {
+      flex: 1; height: 5px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .wc-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--moss-light), var(--gold-light));
+    }
+    .wc-bar-val { width: 28px; text-align: right; color: rgba(255,255,255,0.7); }}
 
     /* ===== STATS ===== */
     .stats-bar {
@@ -1787,6 +1962,7 @@
         <p class="hero-desc" data-i18n="hero_desc">홀리스틱웰니스얼라이언스협회는 통합적 웰니스 접근법을 통해 개인과 공동체의 전인적 건강을 증진하는 비영리 협회입니다.</p>
         <div class="hero-actions">
           <button class="btn btn-primary" onclick="showPage('membership')" data-i18n="hero_cta1">회원 가입하기</button>
+          <a class="btn btn-check" href="https://claude.ai/public/artifacts/4ea43d7f-cb14-4b9b-a0c9-e9c8dd2bfcf2" target="_blank" rel="noopener" data-i18n="hero_cta_check">🌿 웰니스 자가진단</a>
           <button class="btn btn-outline" onclick="showPage('about')" data-i18n="hero_cta2">협회 소개 보기</button>
         </div>
       </div>
@@ -1964,6 +2140,43 @@
             <span class="phase-tag" data-i18n="ph6_t3">생태의식</span>
           </div>
         </div>
+       </div>
+    </div>
+  </section>
+
+  <!-- Wellness Self-Check Banner -->
+  <section class="wellness-check-section">
+    <div class="container">
+      <div class="wc-inner">
+        <div class="wc-left reveal">
+          <div class="wc-tag">&#127807; WELLNESS SELF-CHECK</div>
+          <h2 class="wc-title" data-i18n="wc_title">나의 웰니스 점수는<br><em>얼마일까요?</em></h2>
+          <p class="wc-desc" data-i18n="wc_desc">6가지 웰니스 영역(신체·정신·감정·영성·사회·환경)을 스스로 진단하고, 나만의 맞춤형 웰니스 여정을 시작하세요. 3분이면 충분합니다.</p>
+          <div class="wc-features">
+            <div class="wc-feature-pill"><span>&#9989;</span> <span data-i18n="wc_f1">6개 영역 종합 진단</span></div>
+            <div class="wc-feature-pill"><span>&#9989;</span> <span data-i18n="wc_f2">즉시 결과 확인</span></div>
+            <div class="wc-feature-pill"><span>&#9989;</span> <span data-i18n="wc_f3">맞춤형 개선 제안</span></div>
+            <div class="wc-feature-pill"><span>&#9989;</span> <span data-i18n="wc_f4">무료 · 3분 소요</span></div>
+          </div>
+          <a class="btn btn-check" href="https://claude.ai/public/artifacts/4ea43d7f-cb14-4b9b-a0c9-e9c8dd2bfcf2" target="_blank" rel="noopener" data-i18n="wc_btn" style="font-size:15px;padding:16px 36px;">&#127807; 지금 바로 웰니스 자가진단 하기 &#8594;</a>
+        </div>
+        <div class="wc-visual reveal">
+          <div class="wc-card">
+            <div class="wc-card-header">
+              <div class="wc-score-ring"><span class="wc-score-num">70</span></div>
+              <div class="wc-card-title" data-i18n="wc_sample_title">나의 웰니스 점수</div>
+              <div class="wc-card-sub" data-i18n="wc_sample_sub">6개 영역 종합 평균</div>
+            </div>
+            <div class="wc-bars">
+              <div class="wc-bar-row"><span class="wc-bar-label" data-i18n="wc_bar1">신체</span><div class="wc-bar-track"><div class="wc-bar-fill" style="width:82%"></div></div><span class="wc-bar-val">82</span></div>
+              <div class="wc-bar-row"><span class="wc-bar-label" data-i18n="wc_bar2">정신</span><div class="wc-bar-track"><div class="wc-bar-fill" style="width:68%"></div></div><span class="wc-bar-val">68</span></div>
+              <div class="wc-bar-row"><span class="wc-bar-label" data-i18n="wc_bar3">감정</span><div class="wc-bar-track"><div class="wc-bar-fill" style="width:55%"></div></div><span class="wc-bar-val">55</span></div>
+              <div class="wc-bar-row"><span class="wc-bar-label" data-i18n="wc_bar4">영성</span><div class="wc-bar-track"><div class="wc-bar-fill" style="width:72%"></div></div><span class="wc-bar-val">72</span></div>
+              <div class="wc-bar-row"><span class="wc-bar-label" data-i18n="wc_bar5">사회</span><div class="wc-bar-track"><div class="wc-bar-fill" style="width:78%"></div></div><span class="wc-bar-val">78</span></div>
+              <div class="wc-bar-row"><span class="wc-bar-label" data-i18n="wc_bar6">환경</span><div class="wc-bar-track"><div class="wc-bar-fill" style="width:64%"></div></div><span class="wc-bar-val">64</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1976,15 +2189,14 @@
         <h2 data-i18n="cta_title">웰니스 여정을 함께 시작하세요</h2>
         <p data-i18n="cta_desc">200개 이상의 파트너 기업과 5,000명의 커뮤니티가 당신을 기다립니다</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <button class="btn btn-gold" onclick="showPage('membership')" data-i18n="cta_btn1">회원 가입하기</button>
+            <button class="btn btn-gold" onclick="showPage('membership')" data-i18n="cta_btn1">회원 가입하기</button>
+          <a class="btn btn-check" href="https://claude.ai/public/artifacts/4ea43d7f-cb14-4b9b-a0c9-e9c8dd2bfcf2" target="_blank" rel="noopener" data-i18n="cta_btn_check">🌿 웰니스 자가진단</a>
           <button class="btn btn-outline" onclick="showPage('partners')" data-i18n="cta_btn2">파트너 둘러보기</button>
         </div>
       </div>
     </div>
   </section>
-
 </div>
-
 <!-- ===== ABOUT PAGE ===== -->
 <div id="page-about" class="page">
 
@@ -2082,7 +2294,10 @@
     <div class="container text-center">
       <h2 data-i18n="about_cta_title">여정을 함께 시작하시겠습니까?</h2>
       <p data-i18n="about_cta_desc">지금 회원으로 가입하여 6단계 웰니스 여정을 시작하세요</p>
-      <button class="btn btn-gold" onclick="showPage('membership')" data-i18n="about_cta_btn">회원 가입하기</button>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-gold" onclick="showPage('membership')" data-i18n="about_cta_btn">회원 가입하기</button>
+        <a class="btn btn-check" href="https://claude.ai/public/artifacts/4ea43d7f-cb14-4b9b-a0c9-e9c8dd2bfcf2" target="_blank" rel="noopener" data-i18n="wc_btn_short">🌿 웰니스 자가진단</a>
+      </div>
     </div>
   </section>
 
@@ -2647,6 +2862,15 @@ const i18n = {
     about_cta_title: '여정을 함께 시작하시겠습니까?',
     about_cta_desc: '지금 회원으로 가입하여 6단계 웰니스 여정을 시작하세요',
     about_cta_btn: '회원 가입하기',
+    hero_cta_check: '🌿 웰니스 자가진단',
+    cta_btn_check: '🌿 웰니스 자가진단',
+    wc_btn_short: '🌿 웰니스 자가진단',
+    wc_title: '나의 웰니스 점수는<br><em>얼마일까요?</em>',
+    wc_desc: '6가지 웰니스 영역(신체·정신·감정·영성·사회·환경)을 스스로 진단하고, 나만의 맞춤형 웰니스 여정을 시작하세요. 3분이면 충분합니다.',
+    wc_f1: '6개 영역 종합 진단', wc_f2: '즉시 결과 확인', wc_f3: '맞춤형 개선 제안', wc_f4: '무료 · 3분 소요',
+    wc_btn: '🌿 지금 바로 웰니스 자가진단 하기 →',
+    wc_sample_title: '나의 웰니스 점수', wc_sample_sub: '6개 영역 종합 평균',
+    wc_bar1: '신체', wc_bar2: '정신', wc_bar3: '감정', wc_bar4: '영성', wc_bar5: '사회', wc_bar6: '환경',
     partners_tag: 'OUR PARTNERS',
     partners_title: '함께하는 웰니스 파트너',
     partners_desc: '홀리스틱 웰니스 생태계를 함께 만들어가는 200개 이상의 파트너 기업과 전문가들을 소개합니다',
@@ -2787,6 +3011,15 @@ const i18n = {
     about_cta_title: 'Ready to Start the Journey Together?',
     about_cta_desc: 'Join as a member now and start your 6-phase wellness journey',
     about_cta_btn: 'Join Now',
+    hero_cta_check: '🌿 Wellness Self-Check',
+    cta_btn_check: '🌿 Wellness Self-Check',
+    wc_btn_short: '🌿 Wellness Self-Check',
+    wc_title: 'What Is My<br><em>Wellness Score?</em>',
+    wc_desc: 'Assess yourself across 6 wellness dimensions (Body, Mind, Emotion, Spirit, Social, Environment) and start your personalized wellness journey. Takes only 3 minutes.',
+    wc_f1: '6-Domain Assessment', wc_f2: 'Instant Results', wc_f3: 'Personalized Tips', wc_f4: 'Free · 3 Minutes',
+    wc_btn: '🌿 Take the Wellness Self-Check Now →',
+    wc_sample_title: 'My Wellness Score', wc_sample_sub: '6-Domain Average',
+    wc_bar1: 'Body', wc_bar2: 'Mind', wc_bar3: 'Emotion', wc_bar4: 'Spirit', wc_bar5: 'Social', wc_bar6: 'Environ',
     partners_tag: 'OUR PARTNERS',
     partners_title: 'Our Wellness Partners',
     partners_desc: 'Introducing 200+ partner companies and professionals building the holistic wellness ecosystem together',
@@ -2927,6 +3160,15 @@ const i18n = {
     about_cta_title: '准备好一起开始旅程了吗？',
     about_cta_desc: '立即加入会员，开始6阶段健康旅程',
     about_cta_btn: '立即加入',
+    hero_cta_check: '🌿 健康自测',
+    cta_btn_check: '🌿 健康自测',
+    wc_btn_short: '🌿 健康自测',
+    wc_title: '我的健康得分<br><em>是多少？</em>',
+    wc_desc: '对自己的 6 个健康领域（身体·心理·情绪·灵性·社交·环境）进行自我评估，开始您的个性化健康之旅。仃需 3 分钟。',
+    wc_f1: '6领域综合评估', wc_f2: '即时查看结果', wc_f3: '个性化建议', wc_f4: '免费 · 3分钟',
+    wc_btn: '🌿 立即进行健康自测 →',
+    wc_sample_title: '我的健康得分', wc_sample_sub: '6领域综合平均',
+    wc_bar1: '身体', wc_bar2: '心理', wc_bar3: '情绪', wc_bar4: '灵性', wc_bar5: '社交', wc_bar6: '环境',
     partners_tag: '我们的合作伙伴',
     partners_title: '携手同行的健康伙伴',
     partners_desc: '介绍200多家共同构建全息健康生态系统的合作企业和专家',
@@ -3067,6 +3309,15 @@ const i18n = {
     about_cta_title: '旅を一緒に始めませんか？',
     about_cta_desc: '今すぐ会員に登録して6段階のウェルネスの旅を始めましょう',
     about_cta_btn: '会員登録',
+    hero_cta_check: '🌿 ウェルネスチェック',
+    cta_btn_check: '🌿 ウェルネスチェック',
+    wc_btn_short: '🌿 ウェルネスチェック',
+    wc_title: '私のウェルネススコアは<br><em>いくつ？</em>',
+    wc_desc: '6つのウェルネス領域（身体·精神·感情·スピリチュアル·社会·環境）を自己診断し、あなたのウェルネス旅を始めましょう。3分で十分です。',
+    wc_f1: '6領域総合診断', wc_f2: '即時結果確認', wc_f3: 'カスタマイズ改善案', wc_f4: '無料 · 3分',
+    wc_btn: '🌿 今すぐウェルネスチェックを始める →',
+    wc_sample_title: '私のウェルネススコア', wc_sample_sub: '6領域総合平均',
+    wc_bar1: '身体', wc_bar2: '精神', wc_bar3: '感情', wc_bar4: '靈性', wc_bar5: '社会', wc_bar6: '環境',
     partners_tag: 'パートナー',
     partners_title: '共に歩むウェルネスパートナー',
     partners_desc: 'ホリスティックウェルネスエコシステムを共に構築する200以上のパートナー企業と専門家を紹介します',
@@ -3207,6 +3458,15 @@ const i18n = {
     about_cta_title: 'هل أنت مستعد لبدء الرحلة معاً؟',
     about_cta_desc: 'انضم كعضو الآن وابدأ رحلة العافية ذات المراحل الست',
     about_cta_btn: 'انضم الآن',
+    hero_cta_check: '🌿 فحص العافية',
+    cta_btn_check: '🌿 فحص العافية',
+    wc_btn_short: '🌿 فحص العافية',
+    wc_title: 'ما هو درجة<br><em>عافيتي؟</em>',
+    wc_desc: 'قيّم نفسك عبر 6 مجالات للعافية (الجسد · العقل · العاطفة · الروح · المجتمع · البيئة) وابدأ رحلتك الشخصية نحو العافية. 3 دقائق فقط.',
+    wc_f1: 'تقييم 6 مجالات', wc_f2: 'نتائج فورية', wc_f3: 'توصيات مخصصة', wc_f4: 'مجاني · 3 دقائق',
+    wc_btn: '🌿 ابدأ فحص العافية الآن →',
+    wc_sample_title: 'درجة عافيتي', wc_sample_sub: 'متوسط 6 مجالات',
+    wc_bar1: 'الجسد', wc_bar2: 'العقل', wc_bar3: 'العاطفة', wc_bar4: 'الروح', wc_bar5: 'المجتمع', wc_bar6: 'البيئة',
     partners_tag: 'شركاؤنا',
     partners_title: 'شركاء العافية المرافقون',
     partners_desc: 'تعريف بأكثر من 200 شركة شريكة وخبراء يبنون نظام العافية الشاملة معاً',
